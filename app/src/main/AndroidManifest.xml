@@ -1,18 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.movie">
+    package="com.nationalconclave.bseb">
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET"/>
 
     <application
+        android:name="com.nationalconclave.bseb.App"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:usesCleartextTraffic="true"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.main.view.MainActivity"
+        <activity android:name="com.nationalconclave.bseb.ui.main.view.MainActivity"
+            android:configChanges="orientation">
+        </activity>
+        <activity android:name="com.nationalconclave.bseb.ui.movieDetail.view.MovieDetailActivity"
+            android:configChanges="orientation">
+        </activity>
+
+        <activity android:name="com.nationalconclave.bseb.ui.main.login.LoginActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation">
+        </activity>
+
+        <activity android:name="com.nationalconclave.bseb.ui.main.registration.RegistrationActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize"
+            android:configChanges="orientation">
+        </activity>
+
+        <activity android:name="com.nationalconclave.bseb.ui.main.splash.SplashActivity"
+            android:screenOrientation="portrait"
+            android:exported="true"
             android:configChanges="orientation">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -20,7 +42,28 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ui.movieDetail.view.MovieDetailActivity"
+        <activity android:name="com.nationalconclave.bseb.ui.main.home.HomeActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation">
+        </activity>
+
+        <activity android:name="com.nationalconclave.bseb.ui.main.otp.OtpActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation">
+        </activity>
+
+        <activity android:name="com.nationalconclave.bseb.ui.main.webview.WebViewActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation">
+        </activity>
+
+        <activity android:name=".ui.main.sightseeingregistration.SightSeeingRegActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation">
+        </activity>
+
+        <activity android:name="com.nationalconclave.bseb.ui.main.persondetails.PersonDetailsActivity"
+            android:screenOrientation="portrait"
             android:configChanges="orientation">
         </activity>
     </application>

@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:padding="@dimen/_16sdp"
+    android:background="@color/grey_lightest"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/iv_city"
+        android:layout_width="@dimen/_30sdp"
+        android:layout_height="@dimen/_30sdp"
+        android:src="@drawable/ic_city"
+        android:tint="@color/design_default_color_primary"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+
+    <TextView
+        android:id="@+id/tv_site_seeing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_12sdp"
+        android:textSize="@dimen/_14ssp"
+        android:text="Please select anyone "
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/iv_city"
+        android:includeFontPadding="false"
+        android:textColor="@color/design_default_color_primary"
+        android:textColorHint="@color/color_190A28"
+        app:layout_constraintTop_toTopOf="@+id/iv_city"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_city"/>
+
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/tv_site_seeing"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        android:id="@+id/radio_group">
+        <RadioButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/radio1"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:paddingHorizontal="@dimen/_8sdp"
+            android:paddingVertical="@dimen/_12sdp"
+            android:background="@color/white"
+            android:text="Nalanda and Rajgir"
+            android:textSize="@dimen/_14ssp"
+            android:buttonTint="@color/design_default_color_primary"
+
+            />
+
+
+
+        <RadioButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/radio2"
+            android:paddingVertical="@dimen/_12sdp"
+            android:background="@color/white"
+            android:text="Bodhgaya"
+            android:paddingHorizontal="@dimen/_8sdp"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:textSize="@dimen/_14ssp"
+            android:buttonTint="@color/design_default_color_primary"
+
+            />
+
+
+        <RadioButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/radio3"
+            android:paddingVertical="@dimen/_12sdp"
+            android:background="@color/white"
+            android:text="Vaishali"
+            android:paddingHorizontal="@dimen/_8sdp"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:textSize="@dimen/_14ssp"
+            android:buttonTint="@color/design_default_color_primary"
+
+            />
+
+        <RadioButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/radio4"
+            android:paddingVertical="@dimen/_12sdp"
+            android:background="@color/white"
+            android:text="Patna"
+            android:paddingHorizontal="@dimen/_8sdp"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:textSize="@dimen/_14ssp"
+            android:buttonTint="@color/design_default_color_primary"
+
+            />
+
+    </RadioGroup>
+<!--        <ListView-->
+<!--            android:id="@+id/listView"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:scrollbars="none"-->
+<!--            android:divider="@android:color/transparent"-->
+<!--            android:dividerHeight="@dimen/_8sdp"-->
+<!--            tools:listitem="@layout/list_item_checkbox"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/tv_site_seeing"-->
+<!--            android:layout_marginTop="@dimen/_8sdp"-->
+<!--            android:layout_marginBottom="@dimen/_16sdp"-->
+<!--            />-->
+
+    <TextView
+        android:id="@+id/button_register"
+        style="@style/AppTheme"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_bg"
+        android:text="@string/save"
+        android:textAllCaps="true"
+        android:gravity="center"
+        android:paddingHorizontal="@dimen/_16sdp"
+        android:paddingVertical="@dimen/_12sdp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="@dimen/_12ssp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/button_skip_and_register"
+        app:layout_constraintBottom_toBottomOf="parent"
+
+        />
+
+    <TextView
+        android:id="@+id/button_skip_and_register"
+        style="@style/AppTheme"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_bg"
+        android:text="@string/skip_and_register"
+        android:textAllCaps="true"
+        android:gravity="center"
+        android:paddingHorizontal="@dimen/_16sdp"
+        android:paddingVertical="@dimen/_12sdp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:visibility="gone"
+        android:textSize="@dimen/_12ssp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/button_register"
+        app:layout_constraintBottom_toBottomOf="parent"
+
+        />
+
+
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

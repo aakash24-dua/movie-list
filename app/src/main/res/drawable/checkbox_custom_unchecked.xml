@@ -1,0 +1,5 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <stroke android:color="#000000" android:width="2dp" /> <!-- Change the color and width as desired -->
+    <corners android:radius="8dp" /> <!-- Adjust the corner radius as desired -->
+    <size android:width="24dp" android:height="24dp" /> <!-- Adjust the size as desired -->
+</shape>

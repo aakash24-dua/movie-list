@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:id="@+id/ll_checkbox"
+    android:background="@color/white"
+    android:layout_marginTop="@dimen/_4sdp"
+    android:padding="16dp">
+
+<!--    <CheckBox-->
+<!--        android:id="@+id/checkBox"-->
+<!--        android:layout_width="@dimen/_24sdp"-->
+<!--        android:buttonTint="@color/design_default_color_primary"-->
+<!--        android:layout_height="@dimen/_24sdp" />-->
+
+    <RadioButton
+        android:id="@+id/checkBox"
+        android:layout_width="@dimen/_24sdp"
+        android:layout_height="@dimen/_24sdp"
+        android:checked="false"
+        android:buttonTint="@color/design_default_color_primary"/>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/_14ssp"
+        android:textColor="@color/color_190A28"
+        android:layout_marginStart="8dp" />
+
+</LinearLayout>

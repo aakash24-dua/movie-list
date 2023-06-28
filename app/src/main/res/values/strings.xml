@@ -1,4 +1,43 @@
 <resources>
-    <string name="app_name">Movie</string>
+    <string name="app_name">NCEB Bihar</string>
+    <string name="conclave_day1">Conclave Session Day 1</string>
+    <string name="conclave_day2">Conclave Session Day 2</string>
+    <string name="conclave_day3">Sight Seeing</string>
+    <string name="conclave_day3_with_optional">Sight Seeing (Optional)</string>
+    <string name="register">Register</string>
+    <string name="save">Save</string>
+    <string name="next">Next</string>
+    <string name="skip_and_register">Skip &amp; Register</string>
+    <string name="call">Call</string>
+    <string name="submit">Submit</string>
+    <string name="resend_otp">Resend OTP</string>
+    <string name="enter_otp">Please enter the otp sent to your mobile number</string>
+    <string name="select_items">Sight Seeing Interest *</string>
+    <string name="sight_seeing_interest">Sight Seeing Interest</string>
+    <string name="login">Login</string>
+    <string name="name">Name</string>
+    <string name="driver_details">Driver Details</string>
+    <string name="liaison_officer_details">Liaison Officer Details</string>
+    <string name="nalanda">Nalanda is about 90 km southeast of Patna. Although its history goes back to the times of the Buddha, the university at Nalanda was founded in the 5th century CE, and it flourished for the next 700 years. Its decline began in the late Pala period, but the final blow was the invasion by Bakhtiyar Khilji around 1200 CE. The subjects that were taught at Nalanda included Buddhist scriptures (of both the Mahayana and Hinayana schools), philosophy, theology, metaphysics, logic, grammar, astronomy and medicine. Chinese travellers Hiuen-Tsang and I-Tsing had written detailed accounts about the university.</string>
+    <string name="place_text">Golghar, an enormous granary, was built by Captain John Garstin for British army in 1786, after the terrible impact of 1770 famine. The winding stairway around this monument offers a brilliant view of the city and the Ganga flowing nearby.
+
+It is pillar-less with a wall of thickness of 3.6 m at the base height of 29 m.. One can climb at the top of the Golghar through the 145 steps of its spiral stairway around it. The spiral staircase was designed to facilitate the passage of the workers who deliver their load through a hole at the top, and descend the other stairs.</string>
+
+
+    <string name="mahabodh">The Mahabodhi Temple (literally: "Great Awakening Temple"), a UNESCO World Heritage Site, is an ancient, Buddhist temple in Bodh Gaya, marking the location where the Buddha is said to have attained enlightenment.
+
+The temple stands in the east to the Mahabodhi Tree. Its architectural effect is superb. Its basement is 48 square feet and it rises in the form of a cylindrical pyramid till it reaches its neck, which is cylindrical in shape. The total height of the temple is 170 ft. and on the top of the temple are Chatras which symbolize sovereignty of religion.</string>
+
+    <string name="patna_museum">Bihar Museum has embellished a multitude of artifacts and is a hub of historical knowledge. It is located at Bailey Road Patna and is a favorite visiting spot. The museum is designed to bring the limelight over the rich history and culture of India.
+The interior of Bihar Museum is really appreciated. The premises here are clean and every statue here defines its glorious past.
+There is a specialized timing to visit the museum (10: 30 AM - 5:00 PM) and it is a perfect place to hang out with friends or family. There are various sections in the museum and the most favorite part for children is the artificial wildlife sanctuary.</string>
+
+    <string name="vaishali">Vaishali is considered the first republic in the world, Vaishali derives its name from King Vishal of the Mahabharata era. It is said that he built a great fort here, which is now in ruins. Vaishali is a great Buddhist shrine and also the birthplace of Lord Mahavira. It is said that Buddha visited this place thrice and spent a long time here. The Buddha also gave his last sermon at Vaishali and announced his nirvana here. After his death, Vaishali also held the second Buddhist Council.The great Lichchavi clan ruled Vaishali in the sixth century BC and the empire extended to the hills of Nepal. The Lichchhavi state is considered the first republic state of Asia. According to the Jataka tales (Buddhist story books accounting for the different births of the Buddha), Vaishali was ruled by about 7707 kings of the Lichchavi dynasty. The great Magadha king Ajatashatru founded Vaishali in the fifth century BC and after that Vaishali gradually lost its glory and power.</string>
+    <string-array name="cities">
+        <item>Nalanda</item>
+        <item>Rajgir</item>
+        <item>Rajgir</item>
+        <item>Vaishali</item>
+    </string-array>
 
 </resources>

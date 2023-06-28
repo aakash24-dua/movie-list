@@ -1,0 +1,18 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menu_item2"
+        android:title="@string/liaison_officer_details" />
+    <item
+        android:id="@+id/menu_item1"
+        android:title="@string/driver_details" />
+
+    <item
+        android:id="@+id/menu_item3"
+        android:title="@string/conclave_day3_with_optional" />
+
+    <item
+        android:id="@+id/menu_item4"
+        android:title="@string/sight_seeing_interest" />
+
+    <!-- Add more menu items if needed -->
+</menu>
