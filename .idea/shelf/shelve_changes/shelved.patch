@@ -1,0 +1,3093 @@
+Index: .idea/runConfigurations.xml
+===================================================================
+diff --git a/.idea/runConfigurations.xml b/.idea/runConfigurations.xml
+deleted file mode 100644
+--- a/.idea/runConfigurations.xml	(revision 15d1a7f5e7d56bcf033084c37ff10aca5b0ca488)
++++ /dev/null	(revision 15d1a7f5e7d56bcf033084c37ff10aca5b0ca488)
+@@ -1,12 +0,0 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<project version="4">
+-  <component name="RunConfigurationProducerService">
+-    <option name="ignoredProducers">
+-      <set>
+-        <option value="org.jetbrains.plugins.gradle.execution.test.runner.AllInPackageGradleConfigurationProducer" />
+-        <option value="org.jetbrains.plugins.gradle.execution.test.runner.TestClassGradleConfigurationProducer" />
+-        <option value="org.jetbrains.plugins.gradle.execution.test.runner.TestMethodGradleConfigurationProducer" />
+-      </set>
+-    </option>
+-  </component>
+-</project>
+\ No newline at end of file
+Index: app/src/main/res/drawable/ic_call.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/drawable/ic_call.xml b/app/src/main/res/drawable/ic_call.xml
+new file mode 100644
+--- /dev/null	(date 1686208585702)
++++ b/app/src/main/res/drawable/ic_call.xml	(date 1686208585702)
+@@ -0,0 +1,9 @@
++<vector xmlns:android="http://schemas.android.com/apk/res/android"
++    android:width="16dp"
++    android:height="16dp"
++    android:viewportWidth="16"
++    android:viewportHeight="16">
++    <path
++        android:pathData="M15.0855,10.4003L11.9485,9.0083C11.6382,8.871 11.2913,8.84 10.9615,8.9199C10.6317,8.9998 10.3375,9.1862 10.1245,9.4503L9.1775,10.6353C7.6428,9.659 6.3412,8.3577 5.3645,6.8233L6.5485,5.8773C6.8135,5.6645 7.0008,5.3701 7.081,5.0398C7.1613,4.7096 7.1302,4.362 6.9925,4.0513L5.5995,0.9143C5.4515,0.5811 5.1901,0.3113 4.8617,0.1529C4.5333,-0.0055 4.1594,-0.0422 3.8065,0.0493L1.1545,0.7383C0.7886,0.8339 0.4705,1.0603 0.2604,1.3748C0.0503,1.6892 -0.0372,2.0697 0.0145,2.4443C0.5056,5.8615 2.0905,9.0277 4.5317,11.4688C6.9729,13.9099 10.1393,15.4945 13.5565,15.9853C13.6267,15.9953 13.6976,16.0003 13.7685,16.0003C14.1099,16.0001 14.4417,15.8867 14.7118,15.6779C14.9819,15.4691 15.1753,15.1767 15.2615,14.8463L15.9495,12.1933C16.0424,11.8405 16.0064,11.4662 15.848,11.1375C15.6897,10.8089 15.4193,10.5475 15.0855,10.4003Z"
++        android:fillColor="#FFFFFF"/>
++</vector>
+Index: app/src/main/res/drawable/button_bg_green.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/drawable/button_bg_green.xml b/app/src/main/res/drawable/button_bg_green.xml
+new file mode 100644
+--- /dev/null	(date 1686208700432)
++++ b/app/src/main/res/drawable/button_bg_green.xml	(date 1686208700432)
+@@ -0,0 +1,7 @@
++<?xml version="1.0" encoding="utf-8"?>
++<shape xmlns:android="http://schemas.android.com/apk/res/android"
++    android:shape="rectangle">
++    <solid android:color="@color/color_2BB792"/>
++    <corners android:radius="20dp"/>
++
++</shape>
+\ No newline at end of file
+Index: app/build.gradle
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>apply plugin: 'com.android.application'\napply plugin: 'kotlin-android'\napply plugin: 'kotlin-android-extensions'\napply plugin: 'kotlin-kapt'\n\nandroid {\n    compileOptions {\n        sourceCompatibility JavaVersion.VERSION_1_8\n        targetCompatibility JavaVersion.VERSION_1_8\n    }\n    compileSdkVersion 29\n    buildToolsVersion \"29.0.3\"\n\n    defaultConfig {\n        applicationId \"com.example.movie\"\n        minSdkVersion 21\n        targetSdkVersion 29\n        versionCode 1\n        versionName \"1.0\"\n\n        testInstrumentationRunner \"androidx.test.runner.AndroidJUnitRunner\"\n    }\n\n    buildTypes {\n        release {\n            minifyEnabled false\n            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'\n        }\n    }\n\n}\n\ndependencies {\n    implementation fileTree(dir: 'libs', include: ['*.jar'])\n    implementation \"org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version\"\n    implementation 'androidx.appcompat:appcompat:1.1.0'\n    implementation 'androidx.core:core-ktx:1.3.1'\n    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'\n    testImplementation 'junit:junit:4.12'\n    androidTestImplementation 'androidx.test.ext:junit:1.1.1'\n    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'\n\n    implementation 'androidx.lifecycle:lifecycle-extensions:2.0.0'\n\n    kapt \"androidx.lifecycle:lifecycle-compiler:$lifecycleVersion\"\n    api 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.1.0-beta01'\n    testImplementation 'junit:junit:4.12'\n    androidTestImplementation 'androidx.test.ext:junit:1.1.0'\n    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.1'\n    implementation \"com.google.dagger:dagger:2.17\"\n    kapt \"com.google.dagger:dagger-compiler:2.17\"\n\n    implementation \"com.squareup.retrofit2:retrofit:$retrofit_version\"\n    implementation \"com.squareup.retrofit2:converter-gson:$retrofit_version\"\n    implementation(\"com.squareup.okhttp3:okhttp:4.1.0\")\n    implementation 'com.squareup.okhttp3:logging-interceptor:4.1.0'\n    implementation 'com.intuit.sdp:sdp-android:1.0.6'\n    implementation 'com.intuit.ssp:ssp-android:1.0.6'\n\n    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.3.7'\n    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.3.7'\n\n\n\n    implementation \"io.reactivex.rxjava2:rxandroid:${rxjava_android_version}\"\n    implementation \"com.squareup.retrofit2:adapter-rxjava2:$retrofit_version\"\n    implementation 'androidx.recyclerview:recyclerview:1.1.0'\n    implementation 'com.github.bumptech.glide:glide:4.11.0'\n    implementation 'com.google.android.material:material:1.0.0'\n\n    implementation 'com.squareup.retrofit2:converter-scalars:2.5.0'\n\n\n}\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/build.gradle b/app/build.gradle
+--- a/app/build.gradle	(revision 15d1a7f5e7d56bcf033084c37ff10aca5b0ca488)
++++ b/app/build.gradle	(date 1686169671230)
+@@ -20,6 +20,11 @@
+ 
+         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+     }
++    android {
++        viewBinding {
++            enabled = true
++        }
++    }
+ 
+     buildTypes {
+         release {
+@@ -59,8 +64,10 @@
+ 
+     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.3.7'
+     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.3.7'
++    implementation 'com.readystatesoftware.chuck:library:1.1.0'
++    implementation 'com.pixplicity.easyprefs:library:1.9.0'
+ 
+-
++  //  implementation 'com.github.chuckerTeam.chucker:library:3.5.2'
+ 
+     implementation "io.reactivex.rxjava2:rxandroid:${rxjava_android_version}"
+     implementation "com.squareup.retrofit2:adapter-rxjava2:$retrofit_version"
+Index: app/src/main/java/com/example/movie/utils/GenericResponse.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/example/movie/utils/GenericResponse.kt b/app/src/main/java/com/example/movie/utils/GenericResponse.kt
+new file mode 100644
+--- /dev/null	(date 1686168621791)
++++ b/app/src/main/java/com/example/movie/utils/GenericResponse.kt	(date 1686168621791)
+@@ -0,0 +1,14 @@
++package com.example.movie.utils
++
++import com.google.gson.annotations.SerializedName
++
++data class GenericResponse<T> (
++    @SerializedName("data")
++    val data : T,
++    @SerializedName("success")
++    val isSuccess : Boolean,
++    @SerializedName("error")
++    val error : ErrorResponse? = null
++
++
++)
+\ No newline at end of file
+Index: app/src/main/java/com/example/movie/ui/main/registration/RegistrationResponse.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/example/movie/ui/main/registration/RegistrationResponse.kt b/app/src/main/java/com/example/movie/ui/main/registration/RegistrationResponse.kt
+new file mode 100644
+--- /dev/null	(date 1686156683792)
++++ b/app/src/main/java/com/example/movie/ui/main/registration/RegistrationResponse.kt	(date 1686156683792)
+@@ -0,0 +1,38 @@
++package com.example.movie.ui.main.registration
++
++import com.google.gson.annotations.SerializedName
++
++data class RegistrationResponse (
++
++
++    @SerializedName("first_name")
++    val firstName : String,
++    @SerializedName("last_name")
++    val lastName : String,
++
++    @SerializedName("organisation")
++    val organisation : String,
++    @SerializedName("designation")
++    val designation : String,
++    @SerializedName("email")
++    val email : String,
++    @SerializedName("phone_no")
++    val phoneNo : String,
++    @SerializedName("arrival_date")
++    val arrivalDate : String,
++
++    @SerializedName("departure_date")
++    val departureDate : String,
++    @SerializedName("site_seeing")
++    val siteSeeing : List<String>,
++    @SerializedName("_id")
++    val id : String? = null,
++    @SerializedName("created_at")
++    val created : String?= null,
++    @SerializedName("updated_at")
++    val updated : String? = null,
++    @SerializedName("__v")
++    val v : String? = null
++
++
++        )
+\ No newline at end of file
+Index: .idea/gradle.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"GradleMigrationSettings\" migrationVersion=\"1\" />\n  <component name=\"GradleSettings\">\n    <option name=\"linkedExternalProjectsSettings\">\n      <GradleProjectSettings>\n        <option name=\"testRunner\" value=\"PLATFORM\" />\n        <option name=\"distributionType\" value=\"DEFAULT_WRAPPED\" />\n        <option name=\"externalProjectPath\" value=\"$PROJECT_DIR$\" />\n        <option name=\"modules\">\n          <set>\n            <option value=\"$PROJECT_DIR$\" />\n            <option value=\"$PROJECT_DIR$/app\" />\n          </set>\n        </option>\n        <option name=\"resolveModulePerSourceSet\" value=\"false\" />\n      </GradleProjectSettings>\n    </option>\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/gradle.xml b/.idea/gradle.xml
+--- a/.idea/gradle.xml	(revision 15d1a7f5e7d56bcf033084c37ff10aca5b0ca488)
++++ b/.idea/gradle.xml	(date 1686061549963)
+@@ -4,16 +4,16 @@
+   <component name="GradleSettings">
+     <option name="linkedExternalProjectsSettings">
+       <GradleProjectSettings>
+-        <option name="testRunner" value="PLATFORM" />
++        <option name="testRunner" value="GRADLE" />
+         <option name="distributionType" value="DEFAULT_WRAPPED" />
+         <option name="externalProjectPath" value="$PROJECT_DIR$" />
++        <option name="gradleJvm" value="Embedded JDK" />
+         <option name="modules">
+           <set>
+             <option value="$PROJECT_DIR$" />
+             <option value="$PROJECT_DIR$/app" />
+           </set>
+         </option>
+-        <option name="resolveModulePerSourceSet" value="false" />
+       </GradleProjectSettings>
+     </option>
+   </component>
+Index: app/src/main/java/com/example/movie/utils/AppComponent.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.example.movie.utils\n\nimport com.example.movie.App\nimport com.example.movie.ui.main.view.MainActivity\nimport com.example.movie.ui.main.viewmodel.MainActivityViewModel\nimport com.example.movie.ui.movieDetail.view.MovieDetailActivity\nimport com.example.movie.ui.movieDetail.viewmodel.MovieDetailViewmodel\nimport dagger.Component\nimport javax.inject.Singleton\n\n@Component(modules = [AppModule::class])\n@Singleton\ninterface AppComponent {\n    fun inject(application: App)\n\n    fun inject(activity: MainActivity)\n    fun inject(activity: MovieDetailActivity)\n\n    fun inject(viewModel: MainActivityViewModel)\n    fun inject(viewModel: MovieDetailViewmodel)\n\n    fun networkService(): NetworkService\n\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/example/movie/utils/AppComponent.kt b/app/src/main/java/com/example/movie/utils/AppComponent.kt
+--- a/app/src/main/java/com/example/movie/utils/AppComponent.kt	(revision 15d1a7f5e7d56bcf033084c37ff10aca5b0ca488)
++++ b/app/src/main/java/com/example/movie/utils/AppComponent.kt	(date 1686209423354)
+@@ -1,8 +1,19 @@
+ package com.example.movie.utils
+ 
++import android.app.Person
+ import com.example.movie.App
++import com.example.movie.ui.main.home.HomeActivity
++import com.example.movie.ui.main.login.LoginActivity
++import com.example.movie.ui.main.login.LoginViewModel
++import com.example.movie.ui.main.otp.OtpActivity
++import com.example.movie.ui.main.otp.OtpViewModel
++import com.example.movie.ui.main.persondetails.PersonDetailsActivity
++import com.example.movie.ui.main.registration.RegistrationActivity
++import com.example.movie.ui.main.registration.RegistrationViewModel
++import com.example.movie.ui.main.splash.SplashActivity
+ import com.example.movie.ui.main.view.MainActivity
+ import com.example.movie.ui.main.viewmodel.MainActivityViewModel
++import com.example.movie.ui.main.webview.WebViewActivity
+ import com.example.movie.ui.movieDetail.view.MovieDetailActivity
+ import com.example.movie.ui.movieDetail.viewmodel.MovieDetailViewmodel
+ import dagger.Component
+@@ -16,6 +27,18 @@
+     fun inject(activity: MainActivity)
+     fun inject(activity: MovieDetailActivity)
+ 
++    fun inject(activity: LoginActivity)
++    fun inject(activity: RegistrationActivity)
++    fun inject(activity: SplashActivity)
++    fun inject(activity: HomeActivity)
++    fun inject(activity: OtpActivity)
++    fun inject(activity: WebViewActivity)
++    fun inject(activity: PersonDetailsActivity)
++
++    fun inject(viewModel: LoginViewModel)
++    fun inject(viewModel: RegistrationViewModel)
++    fun inject(viewModel: OtpViewModel)
++
+     fun inject(viewModel: MainActivityViewModel)
+     fun inject(viewModel: MovieDetailViewmodel)
+ 
+Index: app/src/main/java/com/example/movie/ui/main/otp/OtpRequest.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/example/movie/ui/main/otp/OtpRequest.kt b/app/src/main/java/com/example/movie/ui/main/otp/OtpRequest.kt
+new file mode 100644
+--- /dev/null	(date 1686168621797)
++++ b/app/src/main/java/com/example/movie/ui/main/otp/OtpRequest.kt	(date 1686168621797)
+@@ -0,0 +1,13 @@
++package com.example.movie.ui.main.otp
++
++import com.google.gson.annotations.SerializedName
++
++data class OtpRequest(
++    @SerializedName("user_id")
++    val userId : String,
++
++    @SerializedName("phone_no")
++    val phoneNo : String
++
++
++)
+\ No newline at end of file
+Index: app/src/main/res/layout/activity_splash.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/layout/activity_splash.xml b/app/src/main/res/layout/activity_splash.xml
+new file mode 100644
+--- /dev/null	(date 1686165087393)
++++ b/app/src/main/res/layout/activity_splash.xml	(date 1686165087393)
+@@ -0,0 +1,23 @@
++<?xml version="1.0" encoding="utf-8"?>
++<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
++    android:layout_width="match_parent"
++    xmlns:app="http://schemas.android.com/apk/res-auto"
++    android:background="@color/white"
++    android:paddingHorizontal="@dimen/_40sdp"
++    android:layout_height="match_parent">
++
++
++
++    <ImageView
++        android:layout_width="@dimen/_160sdp"
++        android:layout_height="@dimen/_160sdp"
++        android:tint="@color/colorTransparent"
++        app:layout_constraintTop_toTopOf="parent"
++        app:layout_constraintBottom_toBottomOf="parent"
++        app:layout_constraintStart_toStartOf="parent"
++        app:layout_constraintEnd_toEndOf="parent"
++        android:src="@drawable/app_icon"/>
++
++
++
++</androidx.constraintlayout.widget.ConstraintLayout>
+\ No newline at end of file
+Index: app/src/main/java/com/example/movie/ui/main/otp/OtpActivity.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/example/movie/ui/main/otp/OtpActivity.kt b/app/src/main/java/com/example/movie/ui/main/otp/OtpActivity.kt
+new file mode 100644
+--- /dev/null	(date 1686198430665)
++++ b/app/src/main/java/com/example/movie/ui/main/otp/OtpActivity.kt	(date 1686198430665)
+@@ -0,0 +1,151 @@
++package com.example.movie.ui.main.otp
++
++import android.content.Context
++import android.content.Intent
++import android.os.Bundle
++import android.os.CountDownTimer
++import android.view.MenuItem
++import android.widget.Toast
++import androidx.appcompat.app.AppCompatActivity
++import androidx.lifecycle.ViewModelProviders
++import com.example.movie.R
++import com.example.movie.data.Constants
++import com.example.movie.databinding.ActivityOtpBinding
++import com.example.movie.ui.main.home.HomeActivity
++import com.example.movie.utils.gone
++import com.example.movie.utils.show
++import com.example.movie.utils.showToast
++import com.pixplicity.easyprefs.library.Prefs
++
++class OtpActivity : AppCompatActivity() {
++
++    private val viewModel by lazy {
++        ViewModelProviders.of(this).get(OtpViewModel::class.java)
++    }
++
++    private var countDownTimer : CountDownTimer?= null
++    private var otpAttempts : Int= 0
++
++    companion object{
++        val USER_ID = "USER_ID"
++        val PHONE_NO = "PHONE_NO"
++        fun getIntent(context: Context,userId : String,phoneNo : String) : Intent{
++            return Intent(context,OtpActivity::class.java).apply {
++                putExtra(USER_ID,userId)
++                putExtra(PHONE_NO,phoneNo)
++            }
++
++        }
++    }
++
++    lateinit var binding : ActivityOtpBinding
++    override fun onCreate(savedInstanceState: Bundle?) {
++        super.onCreate(savedInstanceState)
++        binding = ActivityOtpBinding.inflate(layoutInflater)
++        setContentView(binding.root)
++        supportActionBar?.setDisplayHomeAsUpEnabled(true)
++        val userId = intent?.getStringExtra(USER_ID)?:""
++        val phoneNo = intent?.getStringExtra(PHONE_NO)?:""
++        title = "Enter Otp"
++        viewModel.triggerOtp(OtpRequest(userId,phoneNo))
++
++        binding.buttonSubmit.setOnClickListener {
++            val code = binding.etOtp.text.toString()
++            if (code.isBlank() || code.length != 4){
++                showToast("Please enter 4 digit otp sent to your phone")
++            }
++            else {
++                viewModel.validateOtp(OtpVerifyRequest(userId, phoneNo,code))
++            }
++        }
++
++        binding.tvResend.setOnClickListener {
++            otpAttempts++
++            viewModel.triggerOtp(OtpRequest(userId,phoneNo))
++            isResendButtonEnable(false)
++        }
++
++        countDownTimer = object : CountDownTimer(30000, 1000) {
++            // 60 seconds countdown with 1-second intervals
++            override fun onTick(millisUntilFinished: Long) {
++                // Update UI or perform any action on each tick
++                val secondsRemaining = millisUntilFinished / 1000
++                binding.tvTimeleft.show()
++                binding.tvTimeleft.text = "$secondsRemaining seconds"
++
++                // Display the remaining time or update any UI element
++                // Example: textView.setText("Seconds remaining: " + secondsRemaining);
++            }
++
++            override fun onFinish() {
++                if (otpAttempts >=2 ){
++                    isResendButtonEnable(false)
++                    binding.tvResend.gone()
++                    binding.tvTimeleft.gone()
++                }
++                else {
++                    isResendButtonEnable(true)
++                    binding.tvTimeleft.gone()
++                }
++            }
++        }
++
++
++        viewModel.publishObjectOtpResponse.subscribe { response->
++            response.userId?.let { userId ->
++                response?.phoneNo?.let { phoneNo ->
++                    binding.tvResend.show()
++                    countDownTimer?.start()
++                    isResendButtonEnable(false)
++                    showToast("Otp has been sent to your mobile number")
++                }
++            }
++
++        }
++
++        viewModel.publishObjectOtpVerifiedResponse.subscribe { response->
++            response.token?.let { token ->
++                showToast("Otp has been verified")
++                Prefs.putString(Constants.token,token)
++                Prefs.putBoolean(Constants.isLoggedIn,true)
++                startActivity(Intent(this@OtpActivity, HomeActivity::class.java))
++            }
++
++        }
++
++        viewModel.showToast.subscribe{ errorString->
++            Toast.makeText(this,errorString, Toast.LENGTH_LONG).show()
++
++        }
++
++    }
++
++
++    override fun onOptionsItemSelected(item: MenuItem): Boolean {
++        val id: Int = item.getItemId()
++        if (id == android.R.id.home) {
++            // Handle the back button press event
++            onBackPressed()
++            return true
++        }
++        return super.onOptionsItemSelected(item)
++    }
++
++    override fun onBackPressed() {
++        super.onBackPressed()
++    }
++
++    override fun onDestroy() {
++        super.onDestroy()
++        countDownTimer?.cancel()
++    }
++
++    private fun isResendButtonEnable(enabled: Boolean) {
++        binding.tvResend.isEnabled = enabled
++        binding.tvResend.isClickable = enabled
++        binding.tvResend.setTextColor(
++             resources.getColor(if(enabled) R.color.red else R.color.grey_700)
++        )
++
++    }
++}
+\ No newline at end of file
+Index: app/src/main/res/layout/activity_otp.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/layout/activity_otp.xml b/app/src/main/res/layout/activity_otp.xml
+new file mode 100644
+--- /dev/null	(date 1686195907999)
++++ b/app/src/main/res/layout/activity_otp.xml	(date 1686195907999)
+@@ -0,0 +1,81 @@
++<?xml version="1.0" encoding="utf-8"?>
++<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
++    android:layout_width="match_parent"
++    xmlns:app="http://schemas.android.com/apk/res-auto"
++    android:background="@color/grey_f2f2f2"
++    android:paddingHorizontal="@dimen/_24sdp"
++    android:layout_height="match_parent">
++
++
++    <TextView
++        android:id="@+id/otp_message"
++        android:layout_width="wrap_content"
++        android:layout_height="wrap_content"
++        app:layout_constraintTop_toTopOf="parent"
++        android:text="@string/enter_otp"
++        android:textSize="@dimen/_14ssp"
++        android:textColor="@color/black"
++        android:layout_marginTop="@dimen/_48sdp"
++        app:layout_constraintStart_toStartOf="parent"
++        app:layout_constraintEnd_toEndOf="parent"
++        />
++
++
++    <EditText
++        android:id="@+id/et_otp"
++        android:layout_width="match_parent"
++        android:layout_height="wrap_content"
++        android:layout_centerInParent="true"
++        android:inputType="number"
++        android:maxLength="4"
++        android:layout_marginTop="@dimen/_24sdp"
++        app:layout_constraintTop_toBottomOf="@+id/otp_message"
++        app:layout_constraintStart_toStartOf="parent"
++        app:layout_constraintEnd_toEndOf="parent"
++        android:textSize="@dimen/_20ssp"
++        android:textColor="@color/black"
++        android:gravity="center_horizontal"
++        android:hint="Enter OTP" />
++
++    <TextView
++        android:id="@+id/tv_resend"
++        android:layout_width="wrap_content"
++        android:layout_height="wrap_content"
++        android:text="@string/resend_otp"
++        app:layout_constraintTop_toBottomOf="@+id/et_otp"
++        android:textColor="@color/red"
++        android:layout_marginTop="@dimen/_8sdp"
++        app:layout_constraintEnd_toEndOf="parent"/>
++
++    <TextView
++        android:id="@+id/tv_timeleft"
++        android:layout_width="wrap_content"
++        android:layout_height="wrap_content"
++        android:text="29"
++        android:visibility="gone"
++        app:layout_constraintTop_toBottomOf="@+id/et_otp"
++        android:textColor="@color/black"
++        android:layout_marginTop="@dimen/_8sdp"
++        app:layout_constraintStart_toStartOf="parent"/>
++
++
++
++
++    <Button
++        android:id="@+id/button_submit"
++        style="@style/AppTheme"
++        android:layout_width="match_parent"
++        android:layout_height="wrap_content"
++        android:background="@color/design_default_color_primary"
++        android:text="@string/submit"
++        android:textColor="@color/white"
++        android:textStyle="bold"
++        android:layout_marginTop="@dimen/_24sdp"
++        app:layout_constraintTop_toBottomOf="@+id/tv_resend"
++        android:layout_marginBottom="@dimen/_20sdp"
++
++        />
++
++
++
++</androidx.constraintlayout.widget.ConstraintLayout>
+\ No newline at end of file
+Index: app/src/main/java/com/example/movie/utils/ErrorResponse.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/example/movie/utils/ErrorResponse.kt b/app/src/main/java/com/example/movie/utils/ErrorResponse.kt
+new file mode 100644
+--- /dev/null	(date 1686168621805)
++++ b/app/src/main/java/com/example/movie/utils/ErrorResponse.kt	(date 1686168621805)
+@@ -0,0 +1,11 @@
++package com.example.movie.utils
++
++import com.google.gson.annotations.SerializedName
++
++data class ErrorResponse (
++    @SerializedName("statusCode")
++    val statusCode : Int,
++    @SerializedName("message")
++    val message : String
++
++        )
+\ No newline at end of file
+Index: app/src/main/java/com/example/movie/ui/main/otp/OtpResponse.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/example/movie/ui/main/otp/OtpResponse.kt b/app/src/main/java/com/example/movie/ui/main/otp/OtpResponse.kt
+new file mode 100644
+--- /dev/null	(date 1686169303521)
++++ b/app/src/main/java/com/example/movie/ui/main/otp/OtpResponse.kt	(date 1686169303521)
+@@ -0,0 +1,14 @@
++package com.example.movie.ui.main.otp
++
++import com.google.gson.annotations.SerializedName
++
++data class OtpResponse (
++    @SerializedName("user_id")
++    val userId : String,
++
++    @SerializedName("phone_no")
++    val phoneNo : String,
++
++    @SerializedName("expires_at")
++    val expiresAt : String
++        )
+\ No newline at end of file
+Index: app/src/main/res/layout/activity_home.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/layout/activity_home.xml b/app/src/main/res/layout/activity_home.xml
+new file mode 100644
+--- /dev/null	(date 1686204815561)
++++ b/app/src/main/res/layout/activity_home.xml	(date 1686204815561)
+@@ -0,0 +1,186 @@
++<?xml version="1.0" encoding="utf-8"?>
++<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
++    xmlns:app="http://schemas.android.com/apk/res-auto"
++    android:layout_width="match_parent"
++    android:layout_height="match_parent"
++    android:background="@color/grey_lightest">
++
++
++    <ImageView
++        android:id="@+id/logo"
++        android:layout_width="@dimen/_100sdp"
++        android:layout_height="@dimen/_100sdp"
++        android:layout_marginTop="@dimen/_16sdp"
++        android:src="@drawable/app_icon"
++        app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintStart_toStartOf="parent"
++        app:layout_constraintTop_toTopOf="parent" />
++
++
++    <TextView
++        android:id="@+id/tv_register"
++        android:layout_width="wrap_content"
++        android:layout_height="wrap_content"
++        android:layout_marginTop="@dimen/_48sdp"
++        android:layout_marginEnd="@dimen/_16sdp"
++        android:background="@drawable/button_bg"
++        android:paddingHorizontal="@dimen/_32sdp"
++        android:paddingVertical="@dimen/_16sdp"
++        android:text="@string/register"
++        android:layout_marginBottom="@dimen/_40sdp"
++        android:textColor="@color/white"
++        app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintStart_toStartOf="parent"
++        app:layout_constraintBottom_toBottomOf="parent" />
++
++
++    <LinearLayout
++        android:layout_width="match_parent"
++        android:layout_height="wrap_content"
++        android:orientation="vertical"
++        android:layout_marginHorizontal="@dimen/_16sdp"
++        android:layout_marginTop="@dimen/_24sdp"
++        app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintStart_toStartOf="parent"
++        app:layout_constraintTop_toBottomOf="@+id/logo">
++
++
++        <androidx.constraintlayout.widget.ConstraintLayout
++            android:id="@+id/cl_day1"
++            android:layout_width="match_parent"
++            android:layout_height="wrap_content"
++            android:background="@drawable/blue_bg_radius8"
++            android:padding="@dimen/_8sdp">
++
++
++            <TextView
++                android:id="@+id/day1"
++                android:layout_width="wrap_content"
++                android:layout_height="wrap_content"
++                android:text="Day 1"
++                android:textColor="@color/dark_pink"
++                android:textSize="@dimen/_12ssp"
++                android:textStyle="bold"
++                app:layout_constraintStart_toStartOf="parent"
++                app:layout_constraintTop_toTopOf="parent" />
++
++            <TextView
++                android:layout_width="wrap_content"
++                android:layout_height="wrap_content"
++                android:text="June 16, 2023"
++                android:textColor="@color/black"
++                android:textSize="@dimen/_10ssp"
++                app:layout_constraintEnd_toEndOf="parent"
++                app:layout_constraintBottom_toBottomOf="parent"
++                app:layout_constraintTop_toTopOf="parent" />
++
++
++            <TextView
++                android:layout_width="wrap_content"
++                android:layout_height="wrap_content"
++                app:layout_constraintTop_toBottomOf="@+id/day1"
++                app:layout_constraintStart_toStartOf="parent"
++                android:text="Topic"
++                android:textSize="@dimen/_16ssp"
++                android:layout_marginTop="@dimen/_4sdp"
++                android:textStyle="bold"
++                android:textColor="@color/royal_blue_color"/>
++
++
++        </androidx.constraintlayout.widget.ConstraintLayout>
++
++        <androidx.constraintlayout.widget.ConstraintLayout
++            android:id="@+id/cl_day2"
++            android:layout_width="match_parent"
++            android:layout_height="wrap_content"
++            android:layout_marginTop="@dimen/_16sdp"
++            android:background="@drawable/blue_bg_radius8"
++            android:padding="@dimen/_8sdp">
++
++
++            <TextView
++                android:id="@+id/day2"
++                android:layout_width="wrap_content"
++                android:layout_height="wrap_content"
++                android:text="Day 2"
++                android:textColor="@color/dark_pink"
++                android:textSize="@dimen/_12ssp"
++                android:textStyle="bold"
++                app:layout_constraintStart_toStartOf="parent"
++                app:layout_constraintTop_toTopOf="parent" />
++
++            <TextView
++                android:layout_width="wrap_content"
++                android:layout_height="wrap_content"
++                android:text="June 17, 2023"
++                android:textColor="@color/black"
++                android:textSize="@dimen/_10ssp"
++                app:layout_constraintEnd_toEndOf="parent"
++                app:layout_constraintBottom_toBottomOf="parent"
++                app:layout_constraintTop_toTopOf="parent" />
++
++
++            <TextView
++                android:layout_width="wrap_content"
++                android:layout_height="wrap_content"
++                app:layout_constraintTop_toBottomOf="@+id/day2"
++                app:layout_constraintStart_toStartOf="parent"
++                android:text="Topic"
++                android:textSize="@dimen/_16ssp"
++                android:layout_marginTop="@dimen/_4sdp"
++                android:textStyle="bold"
++                android:textColor="@color/royal_blue_color"/>
++
++
++        </androidx.constraintlayout.widget.ConstraintLayout>
++
++        <androidx.constraintlayout.widget.ConstraintLayout
++            android:id="@+id/cl_day3"
++            android:layout_width="match_parent"
++            android:layout_height="wrap_content"
++            android:layout_marginTop="@dimen/_16sdp"
++            android:background="@drawable/blue_bg_radius8"
++            android:padding="@dimen/_8sdp">
++
++
++            <TextView
++                android:id="@+id/day3"
++                android:layout_width="wrap_content"
++                android:layout_height="wrap_content"
++                android:text="Day 3"
++                android:textColor="@color/dark_pink"
++                android:textSize="@dimen/_12ssp"
++                android:textStyle="bold"
++                app:layout_constraintStart_toStartOf="parent"
++                app:layout_constraintTop_toTopOf="parent" />
++
++            <TextView
++                android:layout_width="wrap_content"
++                android:layout_height="wrap_content"
++                android:text="June 18, 2023"
++                android:textColor="@color/black"
++                android:textSize="@dimen/_10ssp"
++                app:layout_constraintEnd_toEndOf="parent"
++                app:layout_constraintBottom_toBottomOf="parent"
++                app:layout_constraintTop_toTopOf="parent" />
++
++
++            <TextView
++                android:layout_width="wrap_content"
++                android:layout_height="wrap_content"
++                app:layout_constraintTop_toBottomOf="@+id/day3"
++                app:layout_constraintStart_toStartOf="parent"
++                android:text="Topic"
++                android:textSize="@dimen/_16ssp"
++                android:layout_marginTop="@dimen/_4sdp"
++                android:textStyle="bold"
++                android:textColor="@color/royal_blue_color"/>
++
++
++        </androidx.constraintlayout.widget.ConstraintLayout>
++
++
++    </LinearLayout>
++
++
++</androidx.constraintlayout.widget.ConstraintLayout>
+\ No newline at end of file
+Index: app/src/main/java/com/example/movie/App.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.example.movie\n\nimport android.app.Application\nimport com.example.movie.utils.AppComponent\nimport com.example.movie.utils.AppModule\nimport com.example.movie.utils.DaggerAppComponent\n\nclass App : Application() {\n\n    val component: AppComponent by lazy {\n        DaggerAppComponent\n                .builder()\n                .appModule(AppModule(this))\n                .build()\n    }\n\n    override fun onCreate() {\n        super.onCreate()\n        component.inject(this)\n    }\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/example/movie/App.kt b/app/src/main/java/com/example/movie/App.kt
+--- a/app/src/main/java/com/example/movie/App.kt	(revision 15d1a7f5e7d56bcf033084c37ff10aca5b0ca488)
++++ b/app/src/main/java/com/example/movie/App.kt	(date 1686170894209)
+@@ -1,9 +1,11 @@
+ package com.example.movie
+ 
+ import android.app.Application
++import android.content.ContextWrapper
+ import com.example.movie.utils.AppComponent
+ import com.example.movie.utils.AppModule
+ import com.example.movie.utils.DaggerAppComponent
++import com.pixplicity.easyprefs.library.Prefs
+ 
+ class App : Application() {
+ 
+@@ -17,5 +19,12 @@
+     override fun onCreate() {
+         super.onCreate()
+         component.inject(this)
++        Prefs.Builder()
++            .setContext(this)
++            .setMode(ContextWrapper.MODE_PRIVATE)
++            .setPrefsName(packageName)
++            .setUseDefaultSharedPreference(true)
++            .build()
++
+     }
+ }
+\ No newline at end of file
+Index: app/src/main/java/com/example/movie/ui/main/otp/OtpVerifyRequest.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/example/movie/ui/main/otp/OtpVerifyRequest.kt b/app/src/main/java/com/example/movie/ui/main/otp/OtpVerifyRequest.kt
+new file mode 100644
+--- /dev/null	(date 1686169303514)
++++ b/app/src/main/java/com/example/movie/ui/main/otp/OtpVerifyRequest.kt	(date 1686169303514)
+@@ -0,0 +1,16 @@
++package com.example.movie.ui.main.otp
++
++import com.google.gson.annotations.SerializedName
++
++data class OtpVerifyRequest (
++    @SerializedName("user_id")
++    val userId : String,
++
++    @SerializedName("phone_no")
++    val phoneNo : String,
++
++    @SerializedName("code")
++    val code : String
++
++
++        )
+\ No newline at end of file
+Index: app/src/main/java/com/example/movie/ui/main/otp/OtpVerifiedResponse.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/example/movie/ui/main/otp/OtpVerifiedResponse.kt b/app/src/main/java/com/example/movie/ui/main/otp/OtpVerifiedResponse.kt
+new file mode 100644
+--- /dev/null	(date 1686169303479)
++++ b/app/src/main/java/com/example/movie/ui/main/otp/OtpVerifiedResponse.kt	(date 1686169303479)
+@@ -0,0 +1,9 @@
++package com.example.movie.ui.main.otp
++
++import com.google.gson.annotations.SerializedName
++
++data class OtpVerifiedResponse(
++    @SerializedName("token")
++    val token : String
++
++)
+\ No newline at end of file
+Index: app/src/main/java/com/example/movie/ui/main/persondetails/PersonDetailsActivity.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/example/movie/ui/main/persondetails/PersonDetailsActivity.kt b/app/src/main/java/com/example/movie/ui/main/persondetails/PersonDetailsActivity.kt
+new file mode 100644
+--- /dev/null	(date 1686209671543)
++++ b/app/src/main/java/com/example/movie/ui/main/persondetails/PersonDetailsActivity.kt	(date 1686209671543)
+@@ -0,0 +1,61 @@
++package com.example.movie.ui.main.persondetails
++
++import android.R.attr.phoneNumber
++import android.app.Person
++import android.content.Context
++import android.content.Intent
++import android.net.Uri
++import android.os.Bundle
++import android.view.MenuItem
++import androidx.appcompat.app.AppCompatActivity
++import com.example.movie.databinding.ActivityPersonDetailsBinding
++
++
++class PersonDetailsActivity : AppCompatActivity() {
++
++    companion object{
++        val TITLE = "title"
++        val NAME = "name"
++        val MOBILE = "mobile"
++        fun getIntent(context: Context,title:String,name:String,mobile:String) : Intent{
++            return Intent(context,PersonDetailsActivity::class.java).apply {
++                putExtra(TITLE,title)
++                putExtra(NAME,name)
++                putExtra(MOBILE,mobile)
++            }
++        }
++
++    }
++
++    override fun onOptionsItemSelected(item: MenuItem): Boolean {
++        val id: Int = item.getItemId()
++        if (id == android.R.id.home) {
++            // Handle the back button press event
++            onBackPressed()
++            return true
++        }
++        return super.onOptionsItemSelected(item)
++    }
++
++    override fun onBackPressed() {
++        super.onBackPressed()
++    }
++
++    lateinit var binding : ActivityPersonDetailsBinding
++    override fun onCreate(savedInstanceState: Bundle?) {
++        super.onCreate(savedInstanceState)
++        binding = ActivityPersonDetailsBinding.inflate(layoutInflater)
++        setContentView(binding.root)
++        supportActionBar?.setDisplayHomeAsUpEnabled(true)
++        setTitle(intent.getStringExtra(TITLE)?:"")
++        val phone = intent.getStringExtra(MOBILE)?:""
++        binding.name.text = intent.getStringExtra(NAME)?:""
++        binding.number.text = intent.getStringExtra(MOBILE)?:""
++        binding.tvCall.setOnClickListener {
++            val callIntent = Intent(Intent.ACTION_DIAL)
++            callIntent.data = Uri.parse("tel:" + phone)
++            startActivity(callIntent)
++        }
++
++    }
++}
+\ No newline at end of file
+Index: app/src/main/res/layout/activity_person_details.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/layout/activity_person_details.xml b/app/src/main/res/layout/activity_person_details.xml
+new file mode 100644
+--- /dev/null	(date 1686208767637)
++++ b/app/src/main/res/layout/activity_person_details.xml	(date 1686208767637)
+@@ -0,0 +1,76 @@
++<?xml version="1.0" encoding="utf-8"?>
++<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
++    xmlns:app="http://schemas.android.com/apk/res-auto"
++    android:background="@color/grey_lightest"
++    android:layout_width="match_parent"
++    android:padding="@dimen/_16sdp"
++    android:layout_height="match_parent">
++
++
++    <TextView
++        android:id="@+id/name"
++        android:layout_width="wrap_content"
++        android:layout_height="wrap_content"
++        android:textSize="@dimen/_16ssp"
++        android:text="@string/name"
++        android:textStyle="bold"
++        app:layout_constraintStart_toStartOf="parent"
++        app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintTop_toTopOf="parent"
++        android:textColor="@color/design_default_color_primary"/>
++
++
++    <TextView
++        android:id="@+id/mobile_number_text"
++        android:layout_width="wrap_content"
++        android:layout_height="wrap_content"
++        app:layout_constraintTop_toBottomOf="@+id/name"
++        android:text="Mobile - "
++        android:textColor="@color/black"
++        android:layout_marginTop="@dimen/_16sdp"
++        android:textSize="@dimen/_14ssp"
++        app:layout_constraintHorizontal_chainStyle="packed"
++        app:layout_constraintStart_toStartOf="parent"
++        app:layout_constraintEnd_toStartOf="@+id/number"
++        />
++
++    <TextView
++        android:id="@+id/number"
++        android:layout_width="wrap_content"
++        android:layout_height="wrap_content"
++        app:layout_constraintTop_toBottomOf="@+id/name"
++        android:text="8800452451"
++        android:layout_marginTop="@dimen/_16sdp"
++        android:layout_marginStart="@dimen/_4sdp"
++        android:textColor="@color/black"
++        android:textSize="@dimen/_14ssp"
++        app:layout_constraintHorizontal_chainStyle="packed"
++        app:layout_constraintStart_toEndOf="@+id/mobile_number_text"
++        app:layout_constraintEnd_toEndOf="parent"
++        />
++
++
++    <TextView
++        android:id="@+id/tv_call"
++        android:layout_width="wrap_content"
++        android:layout_height="wrap_content"
++        android:layout_marginTop="@dimen/_48sdp"
++        android:layout_marginEnd="@dimen/_16sdp"
++        android:drawableStart="@drawable/ic_call"
++        android:drawablePadding="@dimen/_8sdp"
++        android:background="@drawable/button_bg_green"
++        android:paddingHorizontal="@dimen/_24sdp"
++        android:paddingVertical="@dimen/_16sdp"
++        android:text="@string/call"
++        android:layout_marginBottom="@dimen/_40sdp"
++        android:textColor="@color/white"
++        app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintStart_toStartOf="parent"
++        app:layout_constraintTop_toBottomOf="@+id/number"
++        />
++
++
++
++
++
++</androidx.constraintlayout.widget.ConstraintLayout>
+\ No newline at end of file
+Index: app/src/main/java/com/example/movie/ui/main/home/HomeActivity.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/example/movie/ui/main/home/HomeActivity.kt b/app/src/main/java/com/example/movie/ui/main/home/HomeActivity.kt
+new file mode 100644
+--- /dev/null	(date 1686209519393)
++++ b/app/src/main/java/com/example/movie/ui/main/home/HomeActivity.kt	(date 1686209519393)
+@@ -0,0 +1,70 @@
++package com.example.movie.ui.main.home
++
++import android.app.Person
++import android.content.Intent
++import android.os.Bundle
++import android.view.Menu
++import android.view.MenuItem
++import androidx.appcompat.app.AppCompatActivity
++import com.example.movie.R
++import com.example.movie.data.Constants
++import com.example.movie.databinding.ActivityHomeBinding
++import com.example.movie.ui.main.persondetails.PersonDetailsActivity
++import com.example.movie.ui.main.registration.RegistrationActivity
++import com.example.movie.ui.main.webview.WebViewActivity
++import com.example.movie.utils.setVisible
++import com.pixplicity.easyprefs.library.Prefs
++
++
++class HomeActivity : AppCompatActivity() {
++
++    lateinit var binding : ActivityHomeBinding
++    private var isLoggedIn : Boolean = false
++
++    override fun onCreate(savedInstanceState: Bundle?) {
++        super.onCreate(savedInstanceState)
++        binding = ActivityHomeBinding.inflate(layoutInflater)
++        setContentView(binding.root)
++        setTitle("National Conclave")
++       // isLoggedIn = Prefs.getBoolean(Constants.isLoggedIn,false)
++        isLoggedIn = true
++        binding.tvRegister.setVisible(isLoggedIn.not())
++
++        binding.tvRegister.setOnClickListener {
++            startActivity(Intent(this,RegistrationActivity::class.java))
++        }
++        val day1Url = Constants.baseUrl.plus("/static-content/1")
++        val day2Url = Constants.baseUrl.plus("/static-content/2")
++        val day3Url = Constants.baseUrl.plus("/static-content/3")
++        binding.clDay1.setOnClickListener {
++            startActivity(WebViewActivity.getIntent(this@HomeActivity,day1Url,"Day 1"))
++        }
++
++        binding.clDay2.setOnClickListener {
++            startActivity(WebViewActivity.getIntent(this@HomeActivity,day2Url, "Day 2"))
++        }
++
++        binding.clDay3.setOnClickListener {
++            startActivity(WebViewActivity.getIntent(this@HomeActivity,day3Url,"Day 3"))
++        }
++
++    }
++    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
++        return if (isLoggedIn) {
++            menuInflater.inflate(R.menu.menu_main, menu)
++            true
++        } else false
++    }
++
++    override fun onOptionsItemSelected(item: MenuItem): Boolean {
++        val id: Int = item.getItemId()
++        if (id == R.id.menu_item1) {
++            startActivity(PersonDetailsActivity.getIntent(this,"Driver Details","Ram","8800452451"))
++            return true
++        } else if (id == R.id.menu_item2) {
++            startActivity(PersonDetailsActivity.getIntent(this,"Admin Details","Arjun","8800452451"))
++            return true
++        }
++        return super.onOptionsItemSelected(item)
++    }
++}
+\ No newline at end of file
+Index: app/src/main/java/com/example/movie/ui/main/registration/MultiSelectionAdapter.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/example/movie/ui/main/registration/MultiSelectionAdapter.kt b/app/src/main/java/com/example/movie/ui/main/registration/MultiSelectionAdapter.kt
+new file mode 100644
+--- /dev/null	(date 1686143467638)
++++ b/app/src/main/java/com/example/movie/ui/main/registration/MultiSelectionAdapter.kt	(date 1686143467638)
+@@ -0,0 +1,49 @@
++package com.example.movie.ui.main.registration
++
++import android.R
++import android.content.Context
++import android.graphics.Color
++import android.util.AttributeSet
++import android.view.View
++import android.view.ViewGroup
++import android.widget.ArrayAdapter
++import android.widget.TextView
++
++
++class MultiSelectionAdapter : ArrayAdapter<String> {
++
++
++    private var selectedItems: BooleanArray = booleanArrayOf()
++
++
++
++    constructor(context: Context, resource: Int, data: List<String?>) : super(context, resource, data) {
++        selectedItems = BooleanArray(data.size)
++    }
++
++    override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
++        val view: View = super.getView(position, convertView, parent!!)
++        val textView: TextView = view.findViewById(R.id.text1)
++        if (selectedItems[position]) {
++            textView.setTextColor(Color.BLUE) // Apply a different color to selected items
++        } else {
++            textView.setTextColor(Color.BLACK) // Reset the color for unselected items
++        }
++        return view
++    }
++
++
++    override fun isEnabled(position: Int): Boolean {
++        return true // Enable all items for selection
++    }
++
++    fun getSelectedItems(): BooleanArray {
++        return selectedItems
++    }
++
++    fun setSelectedItem(position: Int, isSelected: Boolean) {
++        selectedItems[position] = isSelected
++        notifyDataSetChanged()
++    }
++
++}
+\ No newline at end of file
+Index: app/src/main/res/values/colors.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\n<resources>\n    <color name=\"results_header_text\">#1f3366</color>\n    <color name=\"textColor\">#000000</color>\n    <color name=\"app_divider_on_white\">#DFE0E6</color>\n    <color name=\"light_gray\">#f5f5f5</color>\n    <color name=\"colorPrimary\">#DC143C</color>\n    <color name=\"colorPrimaryDark\">#B22222</color>\n    <color name=\"colorAccent\">#D81B60</color>\n\n</resources>\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/values/colors.xml b/app/src/main/res/values/colors.xml
+--- a/app/src/main/res/values/colors.xml	(revision 15d1a7f5e7d56bcf033084c37ff10aca5b0ca488)
++++ b/app/src/main/res/values/colors.xml	(date 1686157040534)
+@@ -1,11 +1,466 @@
+ <?xml version="1.0" encoding="utf-8"?>
+-<resources>
++<resources xmlns:tools="http://schemas.android.com/tools">
+     <color name="results_header_text">#1f3366</color>
+     <color name="textColor">#000000</color>
+     <color name="app_divider_on_white">#DFE0E6</color>
+     <color name="light_gray">#f5f5f5</color>
+-    <color name="colorPrimary">#DC143C</color>
+-    <color name="colorPrimaryDark">#B22222</color>
+-    <color name="colorAccent">#D81B60</color>
++<!--    <color name="colorPrimary">#DC143C</color>-->
++<!--    <color name="colorPrimaryDark">#B22222</color>-->
++<!--    <color name="colorAccent">#D81B60</color>-->
++
++
++
++
++
++        <color name="colorPrimary">#3F51B5</color>
++        <color name="colorPrimaryDark">#3F51B5</color>
++        <color name="colorAccent">#1F8268</color>
++        <color name="colorTransparent">@android:color/transparent</color>
++        <color name="mountain_meadow">#23B574</color>
++        <color name="buttercup">#F39C10</color>
++        <color name="cinnabar">#E84C3D</color>
++        <color name="havelock_blue">#4991E2</color>
++        <color name="color_FC9F5B">#FC9F5B</color>
++        <color name="ghost_white">#F6FAFE</color>
++        <color name="influencer_red">#FD578E</color>
++        <color name="dark_pink">#E0275F</color>
++        <color name="white">#ffffff</color>
++        <color name="link_card_bg">#E5F8F1</color>
++        <color name="white_60_opacity">#b0ffffff</color>
++        <color name="white_30_opacity">#59ffffff</color>
++        <color name="white_80">#CCffffff</color>
++        <color name="colour_yellow">#ffd166</color>
++        <color name="colour_jobs_bottom_yellow_stripe">#fff1d1</color>
++        <color name="city_not_found_grey">#f0f0f0</color>
++        <color name="progress_bar_bg_white">#eaedf2</color>
++        <color name="color_banner_title">#f7f6f7</color>
++        <color name="black">#000000</color>
++        <color name="black_30">#59000000</color>
++        <color name="black_20">#34000000</color>
++        <color name="black_15">#31000000</color>
++        <color name="black_40">#70000000</color>
++        <color name="black_50">#80000000</color>
++        <color name="black_60">#b0000000</color>
++        <color name="black_10">#0c000000</color>
++        <color name="color_light_blue">#D4E0F8</color>
++        <color name="notification_app_name_color">#4d3951</color>
++        <color name="people_connection_bg">#5E4B61</color>
++        <color name="lavender">#E8EDFA</color>
++        <color name="athens_gray">#F4F2F6</color>
++
++        <color name="placeholder_bg">#dddddd</color>
++        <color name="player_bg">#D9000000</color>
++        <color name="color_f1f1f1">#f1f1f1</color>
++        <color name="color_1F8268">#1F8268</color>
++        <color name="kaitoke_green">#00422C</color>
++
++        <color name="color_white">#ffffff</color>
++        <color name="color_jobs_title">#373737</color>
++        <color name="color_jobs_sub_title">#6a6a6a</color>
++        <color name="color_jobs_applied_selected">#212121</color>
++        <color name="color_jobs_banner_bg">#4d3951</color>
++        <color name="trendy_pink">#896690</color>
++        <color name="white_50_opacity">#80FFFFFF</color>
++        <color name="color_alert_blacklist_bg">#CC4d3951</color>
++        <color name="color_banner_btn_bg">@color/colorAccent</color>
++        <color name="color_1f8268">@color/colorAccent</color>
++        <color name="color_azureish_white">#EAF0FC</color>
++        <color name="color_content_viewed">#b34d3951</color>
++        <color name="color_view_profile_title">#373737</color>
++        <color name="color_33ffd166">#33ffd166</color>
++        <color name="color_view_profile_title_bg">#ffd166</color>
++        <color name="color_view_profile_sub_title">#6a6a6a</color>
++        <color name="color_view_profile_job_desc">#a5a5a5</color>
++        <color name="invite_button_bg">@color/colorAccent</color>
++        <color name="website_txt_color">#83bde4</color>
++        <color name="job_txt_color">#1eb892</color>
++        <color name="color_4c4d3951">#4c4d3951</color>
++        <color name="color_4d3951">#4D3951</color>
++        <color name="color_0F4d3951">#0F4D3951</color>
++        <color name="chat_txt_color">#FC9F5B</color>
++        <color name="bottom_bar_txt_inactive_color">#a2a2a2</color>
++        <color name="bottom_bar_txt_active_color">#212121</color>
++        <color name="text_input_layout_box_border">#1e373737</color>
++        <color name="bg_content_viewed">#994d3951</color>
++
++
++        <color name="color_job_det_footer_bg">#ffd166</color>
++        <color name="color_job_det_refer_friend">#ed767e</color>
++
++        <color name="lang_hindi_back_color">#9691cb</color>
++        <color name="lang_thoda_english_color">#83bde4</color>
++        <color name="message_select_color">#BB83bde4</color>
++        <color name="lang_english_back_color">#fc9f5b</color>
++
++        <color name="btn_background">@color/colorAccent</color>
++        <color name="banner_background">#4d2bb793</color>
++
++        <color name="lang_title_color">#373737</color>
++        <color name="lang_sub_title_color">#a5a5a5</color>
++        <color name="login_text_color">#373737</color>
++        <color name="text_color">#373737</color>
++        <color name="subtitle_color">#6a6a6a</color>
++        <color name="otp_sub_title_text">#6a6a6a</color>
++        <color name="otp_text_background">#1e373737</color>
++        <color name="color_f5f5f5">#f5f5f5</color>
++        <color name="color_red_light">#ed767e</color>
++        <color name="mtrl_textinput_default_box_stroke_color" tools:override="true">@color/colorAccent
++        </color>
++        <color name="text_color_spinner">#373737</color>
++        <color name="color_white_opacity_50">#80ffffff</color>
++        <color name="color_white_opacity_80">#CCffffff</color>
++        <color name="color_black_opacity_80">#CC000000</color>
++        <color name="color_bg_test_wizard_green">#667cdbb7</color>
++        <color name="color_bg_test_wizard_text_green">#0e9672</color>
++        <color name="color_bg_test_wizard_red">#40ed767e</color>
++        <color name="color_bg_test_wizard_text_red">#f85963</color>
++        <color name="color_bg_test_timer">#735479</color>
++        <color name="color_bg_test_timer_alert_one">#fc9f5b</color>
++        <color name="color_bg_test_timer_alert_two">#f85963</color>
++        <color name="color_tl_bar_header_start_test">#4d3951</color>
++        <color name="color_border_test_wizard_option">#e7e7e7</color>
++        <color name="color_bg_post_job_img_container">#004d3951</color>
++        <color name="colorGreen">@color/colorAccent</color>
++        <!--<color name="color_btm_navigation_tabs_selected">#212121</color>-->
++        <color name="color_language_gujarati">#ed767e</color>
++        <color name="color_language_marathi">#7cdbb7</color>
++        <color name="color_error">#f85963</color>
++        <color name="color_f8f8f8">#f8f8f8</color>
++        <color name="color_red_ed767e">#ed767e</color>
++
++        <color name="colorOnBoardingIndicatorSelected">#4d3951</color>
++        <color name="colorOnBoardingIndicatorNormal">#404d3951</color>
++        <color name="colorOnBoardingInterestsSelected">#eaeaea</color>
++        <color name="colorOnBoardingInterestsNormal">#ffffff</color>
++        <color name="color_profile_divider">#eaeaea</color>
++        <color name="bright_gray">#eaeaea</color>
++        <color name="color_call_hr_bottom_stripe_lbl">#b56f3c</color>
++        <color name="color_chat_scroll_time">#dff4ef</color>
++        <color name="color_link_preview_sender">#337CDBB7</color>
++        <color name="color_link_preview_receiver">#10000000</color>
++        <color name="color_bg_chat_audio_file">#20000000</color>
++        <color name="color_chat_bg">#f5f5f5</color>
++        <color name="color_chat_user_name">#4d3951</color>
++        <color name="color_chat_bubble_description">#373737</color>
++        <color name="color_chat_scroll_down">#A5A5A5</color>
++        <color name="greenish_teal_file_preview">@color/colorAccent</color>
++        <color name="color_edebed">#edebed</color>
++        <color name="interests_bg">#ecfaf4</color>
++
++        <color name="text_input_box_stroke">#59000000</color>
++        <color name="color_ddf2ed">#ddf2ed</color>
++        <color name="colour_yellow_30">#4Dffd166</color>
++        <color name="edit_icon_color">#4d3951</color>
++        <color name="claps_diamond_color">#0078D2</color>
++        <color name="clap_view_diamond_color">#2f68e3</color>
++        <color name="claps_influncer_color">#fe5196</color>
++        <color name="claps_silver_color">#6a6a6a</color>
++        <color name="claps_gold_color">#fc9f5b</color>
++        <color name="claps_starter_color">#ffffff</color>
++        <color name="color_orange">#fc9f5b</color>
++
++        <!--grey-->
++        <color name="md_grey_50">#FAFAFA</color>
++        <color name="md_grey_100">#F5F5F5</color>
++        <color name="md_grey_200">#EEEEEE</color>
++        <color name="md_grey_300">#E0E0E0</color>
++        <color name="md_grey_400">#BDBDBD</color>
++        <color name="md_grey_500">#9E9E9E</color>
++        <color name="md_grey_600">#757575</color>
++        <color name="md_grey_700">#616161</color>
++        <color name="md_grey_800">#424242</color>
++        <color name="md_grey_900">#212121</color>
++        <color name="md_black_1000">#000000</color>
++        <color name="md_white_1000">#ffffff</color>
++        <color name="purple_translucent">#f34d3951</color>
++        <color name="blue_magenta_translucent">#f3190A28</color>
++        <color name="purple_translucent_50">#804D3951</color>
++        <color name="grey_translucent">#aa4d3951</color>
++        <color name="orange">#f85963</color>
++        <color name="grey_f2f2f2">#f2f2f2</color>
++
++        <!-- Level up Notification   -->
++        <color name="color_bg_silver_medal">#6a6a6a</color>
++        <color name="color_bg_diamond_medal">#2f68e3</color>
++        <color name="color_bg_gold_medal">#fc9f5b</color>
++        <color name="grey_sent_message">#eeeeee</color>
++        <color name="color_violet_opacity_80">#CC4d3951</color>
++
++
++        <color name="black_opacity_50">#80ffffff</color>
++
++        <color name="text_subtitle">#6a6a6a</color>
++        <color name="confirm">@color/colorAccent</color>
++        <color name="viewpager_un_selected">#264d3951</color>
++        <color name="reported_bg">#fee5e6</color>
++
++        <color name="interest_overlay">#BBEDEDED</color>
++        <color name="color_bg_jobs_feed_status">#55ffd166</color>
++        <color name="bg_interview_fixed">#337cdbb7</color>
++        <color name="grey_button">#f2f2f2</color>
++        <color name="purple">#654e85</color>
++
++        <color name="job_filter_chip_selected">#4D3951</color>
++        <color name="job_filter_chip_normal">#F5F5F5</color>
++        <color name="job_filter_chip_text_normal">#6A6A6A</color>
++
++        <color name="dust_gray">#979797</color>
++        <color name="dove_gray">#6a6a6a</color>
++        <color name="dove_gray_50">#806a6a6a</color>
++        <color name="silver_chalice">#a5a5a5</color>
++        <color name="mine_shaft">#373737</color>
++        <color name="wild_sand">#F5F5F5</color>
++        <color name="barely_white">#FFF1D1</color>
++        <color name="copper">#b56f3c</color>
++        <color name="golder_tainoi">#ffd166</color>
++        <color name="golder_tainoi_opacity_60">#99ffd166</color>
++
++        <color name="carnation">#F85F62</color>
++        <color name="black_54">#8a000000</color>
++        <color name="black_87">#de000000</color>
++        <color name="black_90">#444444</color>
++
++        <color name="lang_swalpa_english">#9691cb</color>
++        <color name="lang_english">#83bde4</color>
++        <color name="lang_thoda_english">#fc9f5b</color>
++        <color name="black_currant">#352738</color>
++        <color name="jungle_green_light">@color/colorAccent</color>
++
++        <color name="color_assessment_progress">#7cdbb7</color>
++        <color name="color_address">#4a4a4a</color>
++        <color name="color_expired_red">#33ed767e</color>
++        <color name="closed">#d8d8d8</color>
++        <color name="gray_darker">#d0d0d0</color>
++        <color name="colorJSRCompanyName">#444444</color>
++        <color name="colorJSRJobDesc">#6b7c8f</color>
++        <color name="colorJSRShare">@color/colorAccent</color>
++        <color name="color_search_results">#979797</color>
++        <color name="colorJSRLocation">#373737</color>
++        <color name="colorJSRChips">#eaeaea</color>
++        <color name="color_int_full">#dae0e5</color>
++        <color name="pre_assessment_progress_green">#00422C</color>
++        <color name="progress_green">#167e63</color>
++        <color name="progress_purple">#ac91b2</color>
++        <color name="dark_grey">#373737</color>
++        <color name="color_blocked_connections">#F85963</color>
++        <color name="golden_tainoi">#ffd166</color>
++        <color name="white_lilac">#f5f7fb</color>
++        <color name="black_squeeze">#F4F7FB</color>
++        <color name="blue_bayoux">#536579</color>
++        <color name="tundora">#444444</color>
++        <color name="bluish_grey">#31445A</color>
++        <color name="jungle_green_40">#402bb792</color>
++        <color name="gallery">#ededed</color>
++        <color name="black_5">#0d000000</color>
++        <color name="orange_roughy">#d26515</color>
++        <color name="picton_blue">#3ba0e3</color>
++        <color name="text_black">#444444</color>
++        <color name="text_gray">#9BA9B8</color>
++        <color name="jungle_green_31">#4F2BB792</color>
++        <color name="translucent_sky_blue">#8C83bde4</color>
++        <color name="gray">#E5E5E5</color>
++        <color name="profile_prompt_color">#190A28</color>
++        <color name="color_CB2F4B">#CB2F4B</color>
++        <color name="green_dark">#1C9273</color>
++        <color name="light_green">#e5f8f1</color>
++        <color name="color_banner_btn_bg_2">@color/colorAccent</color>
++        <color name="buttered_rum">#a37711</color>
++        <color name="color_8CDAFF">#8CDAFF</color>
++        <color name="color_B8B0B9">#B8B0B9</color>
++        <color name="red">#CB2F4B</color>
++        <color name="slight_red">#0ACB2F4B</color>
++        <color name="color_190A28">#190A28</color>
++        <color name="color_261D28">#261D28</color>
++        <color name="color_08211A">#08211A</color>
++        <color name="color_80190A28">#80190A28</color>
++        <color name="color_827485">#827485</color>
++        <color name="color_930101">#930101</color>
++        <color name="disabled">#8C8594</color>
++        <color name="deep_black">#1C1F2C</color>
++        <color name="color_FFF2F3">#FFF2F3</color>
++        <color name="recommendation">#FF6937</color>
++        <color name="skip_for_now">#827485</color>
++        <color name="separator_color">#E8E7EA</color>
++        <color name="em_bg_color">#F4F2F6</color>
++
++        <color name="color_F4F2F6">#F4F2F6</color>
++        <color name="color_DDEAFF">#DDEAFF</color>
++        <color name="color_FFF0E7">#FFF0E7</color>
++        <color name="color_D1CED4">#D1CED4</color>
++        <color name="color_444444">#444444</color>
++        <color name="color_shimmer">#264d3951</color>
++        <color name="mine_shaft_dark">#323232</color>
++        <color name="color_E63535">#E63535</color>
++
++
++        <color name="color_8C8594">#8C8594</color>
++        <color name="color_mamba">#8c8594</color>
++        <color name="coach_mark_background_color">#F04d3951</color>
++        <color name="color_E8E7EA">#E8E7EA</color>
++        <color name="color_floral_white">#FFFAED</color>
++        <color name="conversation_status_bg">#33979797</color>
++        <color name="pull_refresh_color">#5CBEFF</color>
++        <color name="color_0078D2">#0078D2</color>
++        <color name="color_7CDBB7">#7CDBB7</color>
++        <color name="color_DDF0E9">#DDF0E9</color>
++        <color name="color_4D3951B2">#B34D3951</color>
++        <color name="color_FFF6E0">#FFF6E0</color>
++        <!--    profile 2.0-->
++        <color name="burning_orange">#FF6937</color>
++        <color name="whisper">#E8E7EA</color>
++        <color name="whisper_medium">#F4F2F6</color>
++        <color name="gray_suit">#D1CED4</color>
++        <color name="purple_opaque">#7F7082</color>
++        <color name="mobster">#8C8594</color>
++        <color name="mono_pink">#827485</color>
++        <color name="mercury">#E9E9E9</color>
++        <color name="haiti">#190A28</color>
++        <color name="jungle_green">@color/colorAccent</color>
++        <color name="white_alpha_10">#1AFFFFFF</color>
++        <color name="grey_800">#444444</color>
++        <color name="grey_700">#6A6A6A</color>
++        <color name="pinkish_grey">#827485</color>
++        <color name="voodoo">#4D3951</color>
++        <color name="black_o_50">#7F000000</color>
++        <color name="color_D0E8F8">#D0E8F8</color>
++
++        <color name="color_ffedfd">#FFEDFD</color>
++        <color name="purple_color_opacity75">#B34D3951</color>
++        <color name="royal_blue_color">#2f68e3</color>
++        <color name="tropical_blue_color">#D5E1F9</color>
++
++
++        <!-- Copied from Applozic -->
++        <color name="colour_green">@color/colorAccent</color>
++        <color name="chat_msg_info_color">#fff1d1</color>
++        <color name="chat_info_text_color">#b56f3c</color>
++        <color name="grey_lightest">#f0f0f0</color>
++        <color name="grey_light">#a5a5a5</color>
++        <color name="grey">#e5e5e5</color>
++        <color name="blue_grey_300">#616f76</color>
++        <color name="bg_card">#e0f9cc</color>
++        <color name="md_red_500">#F44336</color>
++        <color name="md_red_600">#E53935</color>
++        <color name="md_red_700">#D32F2F</color>
++        <color name="color_e8e7ea">#E8E7EA</color>
++        <color name="color_ff6937">#FF6937</color>
++        <color name="whitesmoke">#f5f5f5</color>
++        <color name="applozic_theme_color_control_activated">#ff0099cc</color>
++        <color name="applozic_theme_color_control_highlight">#ff0099ee</color>
++        <color name="apploizc_darker_gray_color">#aaa</color>
++        <color name="apploizc_lite_gray_color">#666666</color>
++        <color name="dark_black">#ff000000</color>
++
++        <color name="color_FFFAF0">#FFFAF0</color>
++        <color name="color_0F0F0F">#0F0F0F</color>
++        <color name="ronchi">#EFB94C</color>
++        <color name="violet">#1C0730</color>
++        <color name="marigold_yellow">#F9DF7B</color>
++        <color name="vis_vis">#FFF3A6</color>
++        <color name="color_83BDE4">#83BDE4</color>
++        <color name="color_388BF2">#388BF2</color>
++        <color name="color_EAF3FE">#EAF3FE</color>
++        <color name="wisp_pink">#fdf1f1</color>
++        <color name="light_cyan_color">#EAEFFB</color>
++        <color name="dark_cyan_color">#83BDE4</color>
++        <color name="chatelle">#B8B0B9</color>
++        <color name="color_CB304B">#CB304B</color>
++
++        <!--Applied job status -->
++        <color name="color_E9F3FF">#E9F3FF</color>
++        <color name="color_54A6FC">#54A6FC</color>
++        <color name="color_43C8A6">#43C8A6</color>
++        <color name="color_8FD4C4">#8FD4C4</color>
++        <color name="color_F9F8FA">#F9F8FA</color>
++        <color name="color_E5F8F1">#E5F8F1</color>
++        <color name="color_E6F8F4">#E6F8F4</color>
++        <color name="color_FEEBED">#FEEBED</color>
++        <color name="color_EC2E4A">#EC2E4A</color>
++        <color name="color_FFFAEF">#FFFAEF</color>
++        <color name="color_FC7039">#FC7039</color>
++        <color name="color_F4F5F7">#F4F5F7</color>
++        <color name="color_5A6C86">#5A6C86</color>
++        <color name="color_66ffffff">#66ffffff</color>
++        <color name="color_a0ffffff">#a0ffffff</color>
++
++        <color name="color_d4E0F8">#D4E0F8</color>
++        <color name="color_006CFA">#006CFA</color>
++        <color name="color_cbcbcb">#CBCBCB</color>
++        <color name="color_B3BAC5">#B3BAC5</color>
++
++        <color name="color_4D3951">#4D3951</color>
++        <color name="color_6565651a">#6565651a</color>
++        <color name="color_D2D2D2">#d2d2d2</color>
++        <color name="color_0D190A28">#0D190A28</color>
++
++        <color name="color_E9F8F3">#E9F8F3</color>
++        <color name="color_F3E8EA">#F3E8EA</color>
++        <color name="color_EDFAFF">#EDFAFF</color>
++        <color name="color_2F68E3">#2F68E3</color>
++        <color name="color_FFFCF4">#FFFCF4</color>
++        <color name="zircon">#F2F7FF</color>
++        <color name="royal_blue_career_counselling">#6053F3</color>
++        <color name="purple_heart">#5E32BA</color>
++        <color name="white_pointer">#FDF5FF</color>
++        <color name="blue_chalk">#F8DDFF</color>
++        <color name="color_95DBC8">#95DBC8</color>
++
++        <color name="color_31445A">#31445A</color>
++        <color name="color_5E6C84">#5E6C84</color>
++        <color name="color_EBF3FE">#EBF3FE</color>
++        <color name="color_42526E">#42526E</color>
++        <color name="color_F8B35B">#F8B35B</color>
++        <color name="color_6B7C8F">#6B7C8F</color>
++        <color name="color_FCF9F4">#FCF9F4</color>
++        <color name="color_F5F9FF">#F5F9FF</color>
++        <color name="off_green">#E5F8F1</color>
++        <color name="color_CB2F67">#CB2F67</color>
++        <color name="color_2BB792">@color/colorAccent</color>
++        <color name="color_FAFEFC">#FAFEFC</color>
++        <color name="athens_gray_66">#66F4F2F6</color>
++        <color name="color_EAF0FC">#EAF0FC</color>
++        <color name="color_2C2C2C">#2C2C2C</color>
++        <color name="color_F2FBF8">#F2FBF8</color>
++        <color name="color_FFEBEB">#FFEBEB</color>
++        <color name="color_EFFBF7">#EFFBF7</color>
++        <color name="color_C2DCFF">#C2DCFF</color>
++        <color name="persian_indigo">#3F1973</color>
++        <color name="color_cfe9f8">#cfe9f8</color>
++        <color name="amour">#fcf4f6</color>
++        <color name="sauvignon">#fff7f5</color>
++        <color name="color_f1eafa">#F1EAFA</color>
++        <color name="color_003C96">#003C96</color>
++        <color name="color_4F2EAE">#4F2EAE</color>
++        <color name="color_6093D6">#6093D6</color>
++        <color name="color_FBECED">#FBECED</color>
++        <color name="color_800000">#800000</color>
++        <color name="color_E7F9F9">#E7F9F9</color>
++        <color name="color_021330">#021330</color>
++        <color name="color_842000">#842000</color>
++
++
++        <color name="ujf_filter_text_color">@color/color_190A28</color>
++        <color name="ujf_filter_divider_color">@color/color_F4F2F6</color>
++        <color name="ujf_filter_group_background_unselected_color">@color/color_F4F2F6</color>
++        <color name="ujf_filter_group_background_selected_color">@color/white</color>
++        <color name="ujf_filter_single_search_hint">@color/color_B8B0B9</color>
++        <color name="ujf_filter_search_hint">@color/color_8C8594</color>
++        <color name="ujf_filter_search_no_result">#80F4F2F6</color>
++        <color name="ujf_filter_search_no_result_title">@color/color_827485</color>
++        <color name="ujf_job_type_view_all_title_sub_title">@color/color_4d3951</color>
++        <color name="ujf_app_bar">#ECE9F4</color>
++        <color name="ujf_filter_item_text_color">@color/color_8C8594</color>
++        <color name="color_005062">#005062</color>
++        <color name="color_2BB793">@color/colorAccent</color>
++        <color name="color_D9D9D9">#D9D9D9</color>
++        <color name="color_EAF8F4">#EAF8F4</color>
++
++        <color name="color_1458C9">#1458C9</color>
++        <color name="color_E85D04">#E85D04</color>
++        <color name="color_73E6D3_opacity30">#4D73E6D3</color>
++        <color name="color_9B0000">#9B0000</color>
++        <color name="core_green">@color/colorAccent</color>
++
++
+ 
+ </resources>
+Index: app/src/main/res/drawable/button_bg.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/drawable/button_bg.xml b/app/src/main/res/drawable/button_bg.xml
+new file mode 100644
+--- /dev/null	(date 1686137916720)
++++ b/app/src/main/res/drawable/button_bg.xml	(date 1686137916720)
+@@ -0,0 +1,7 @@
++<?xml version="1.0" encoding="utf-8"?>
++<shape xmlns:android="http://schemas.android.com/apk/res/android"
++    android:shape="rectangle">
++    <solid android:color="@color/design_default_color_primary"/>
++    <corners android:radius="20dp"/>
++
++</shape>
+\ No newline at end of file
+Index: app/src/main/AndroidManifest.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\n<manifest xmlns:android=\"http://schemas.android.com/apk/res/android\"\n    package=\"com.example.movie\">\n\n    <uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\" />\n    <uses-permission android:name=\"android.permission.INTERNET\"/>\n\n    <application\n        android:allowBackup=\"true\"\n        android:icon=\"@mipmap/ic_launcher\"\n        android:usesCleartextTraffic=\"true\"\n        android:roundIcon=\"@mipmap/ic_launcher_round\"\n        android:supportsRtl=\"true\"\n        android:theme=\"@style/AppTheme\">\n        <activity android:name=\".ui.main.view.MainActivity\"\n            android:configChanges=\"orientation\">\n            <intent-filter>\n                <action android:name=\"android.intent.action.MAIN\" />\n\n                <category android:name=\"android.intent.category.LAUNCHER\" />\n            </intent-filter>\n        </activity>\n        <activity android:name=\".ui.movieDetail.view.MovieDetailActivity\"\n            android:configChanges=\"orientation\">\n        </activity>\n    </application>\n\n</manifest>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/AndroidManifest.xml b/app/src/main/AndroidManifest.xml
+--- a/app/src/main/AndroidManifest.xml	(revision 15d1a7f5e7d56bcf033084c37ff10aca5b0ca488)
++++ b/app/src/main/AndroidManifest.xml	(date 1686209423361)
+@@ -6,6 +6,7 @@
+     <uses-permission android:name="android.permission.INTERNET"/>
+ 
+     <application
++        android:name=".App"
+         android:allowBackup="true"
+         android:icon="@mipmap/ic_launcher"
+         android:usesCleartextTraffic="true"
+@@ -13,6 +14,24 @@
+         android:supportsRtl="true"
+         android:theme="@style/AppTheme">
+         <activity android:name=".ui.main.view.MainActivity"
++            android:configChanges="orientation">
++        </activity>
++        <activity android:name=".ui.movieDetail.view.MovieDetailActivity"
++            android:configChanges="orientation">
++        </activity>
++
++        <activity android:name=".ui.main.login.LoginActivity"
++            android:screenOrientation="portrait"
++            android:configChanges="orientation">
++        </activity>
++
++        <activity android:name=".ui.main.registration.RegistrationActivity"
++            android:screenOrientation="portrait"
++            android:configChanges="orientation">
++        </activity>
++
++        <activity android:name=".ui.main.splash.SplashActivity"
++            android:screenOrientation="portrait"
+             android:configChanges="orientation">
+             <intent-filter>
+                 <action android:name="android.intent.action.MAIN" />
+@@ -20,7 +39,23 @@
+                 <category android:name="android.intent.category.LAUNCHER" />
+             </intent-filter>
+         </activity>
+-        <activity android:name=".ui.movieDetail.view.MovieDetailActivity"
++        <activity android:name=".ui.main.home.HomeActivity"
++            android:screenOrientation="portrait"
++            android:configChanges="orientation">
++        </activity>
++
++        <activity android:name=".ui.main.otp.OtpActivity"
++            android:screenOrientation="portrait"
++            android:configChanges="orientation">
++        </activity>
++
++        <activity android:name=".ui.main.webview.WebViewActivity"
++            android:screenOrientation="portrait"
++            android:configChanges="orientation">
++        </activity>
++
++        <activity android:name=".ui.main.persondetails.PersonDetailsActivity"
++            android:screenOrientation="portrait"
+             android:configChanges="orientation">
+         </activity>
+     </application>
+Index: app/src/main/res/values/strings.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><resources>\n    <string name=\"app_name\">Movie</string>\n\n</resources>\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/values/strings.xml b/app/src/main/res/values/strings.xml
+--- a/app/src/main/res/values/strings.xml	(revision 15d1a7f5e7d56bcf033084c37ff10aca5b0ca488)
++++ b/app/src/main/res/values/strings.xml	(date 1686207320896)
+@@ -1,4 +1,19 @@
+ <resources>
+     <string name="app_name">Movie</string>
++    <string name="register">Register</string>
++    <string name="call">Call</string>
++    <string name="submit">Submit</string>
++    <string name="resend_otp">Resend OTP</string>
++    <string name="enter_otp">Please enter the otp sent to you mobile number</string>
++    <string name="select_items">Select Cities</string>
++    <string name="login">Login</string>
++    <string name="name">Name</string>
++
++    <string-array name="cities">
++        <item>Nalanda</item>
++        <item>Rajgir</item>
++        <item>Rajgir</item>
++        <item>Vaishali</item>
++    </string-array>
+ 
+ </resources>
+Index: app/src/main/java/com/example/movie/ui/main/registration/RegistrationActivity.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/example/movie/ui/main/registration/RegistrationActivity.kt b/app/src/main/java/com/example/movie/ui/main/registration/RegistrationActivity.kt
+new file mode 100644
+--- /dev/null	(date 1686198430660)
++++ b/app/src/main/java/com/example/movie/ui/main/registration/RegistrationActivity.kt	(date 1686198430660)
+@@ -0,0 +1,307 @@
++package com.example.movie.ui.main.registration
++
++import android.app.AlertDialog
++import android.app.DatePickerDialog
++import android.content.DialogInterface
++import android.content.DialogInterface.OnMultiChoiceClickListener
++import android.os.Bundle
++import android.view.MenuItem
++import android.widget.Toast
++import androidx.appcompat.app.AppCompatActivity
++import androidx.lifecycle.ViewModelProviders
++import com.example.movie.R
++import com.example.movie.databinding.ActivityRegistrationBinding
++import com.example.movie.ui.main.otp.OtpActivity
++import com.example.movie.utils.isValidPhoneNumber
++import com.example.movie.utils.showToast
++import kotlinx.android.synthetic.main.card_view.*
++import java.util.*
++
++
++class RegistrationActivity : AppCompatActivity() {
++
++
++    val selectedItems : BooleanArray by lazy {
++        BooleanArray(dataArray.size)
++    }
++    var dataList: ArrayList<Int> = ArrayList()
++    var dataArray = arrayOf("Nalanda","Rajgir","Bodhgaya","Vaishali")
++
++    private val viewModel by lazy {
++        ViewModelProviders.of(this).get(RegistrationViewModel::class.java)
++    }
++
++
++    lateinit var binding : ActivityRegistrationBinding
++
++
++    override fun onOptionsItemSelected(item: MenuItem): Boolean {
++        val id: Int = item.getItemId()
++        if (id == android.R.id.home) {
++            // Handle the back button press event
++            onBackPressed()
++            return true
++        }
++        return super.onOptionsItemSelected(item)
++    }
++
++    override fun onBackPressed() {
++        super.onBackPressed()
++    }
++
++    override fun onCreate(savedInstanceState: Bundle?) {
++        super.onCreate(savedInstanceState)
++        binding = ActivityRegistrationBinding.inflate(layoutInflater)
++        setContentView(binding.root)
++        title = "Registration"
++        supportActionBar?.setDisplayHomeAsUpEnabled(true)
++
++        binding.arrivalDate.setOnClickListener {
++            val c = Calendar.getInstance()
++
++            // on below line we are getting
++            // our day, month and year.
++            val year = c.get(Calendar.YEAR)
++            val month = c.get(Calendar.MONTH)
++            val day = c.get(Calendar.DAY_OF_MONTH)
++
++            // on below line we are creating a
++            // variable for date picker dialog.
++            val datePickerDialog = DatePickerDialog(
++                // on below line we are passing context.
++                this,
++                { view, year, monthh, dayy ->
++                    // on below line we are setting
++                    // date to our text view.
++                    var monthOfYear = (monthh.plus(1)).toString()
++                    if (monthOfYear.length == 1){
++                        monthOfYear = "0$monthOfYear"
++                    }
++                    var dayOfMonth = dayy.toString()
++                    if (dayOfMonth.length == 1){
++                        dayOfMonth = "0$dayOfMonth"
++                    }
++                    val dep =year.toString() + "-" + monthOfYear + "-" + dayOfMonth
++                    binding.arrivalDate.setText(dep)
++
++
++                },
++                // on below line we are passing year, month
++                // and day for the selected date in our date picker.
++                year,
++                month,
++                day
++            )
++            // at last we are calling show
++            // to display our date picker dialog.
++            datePickerDialog.show()
++        }
++
++
++        binding.departureDate.setOnClickListener {
++            val c = Calendar.getInstance()
++
++            // on below line we are getting
++            // our day, month and year.
++            val year = c.get(Calendar.YEAR)
++            val month = c.get(Calendar.MONTH)
++            val day = c.get(Calendar.DAY_OF_MONTH)
++
++            // on below line we are creating a
++            // variable for date picker dialog.
++            val datePickerDialog = DatePickerDialog(
++                // on below line we are passing context.
++                this,
++                { view, year, monthh, dayy ->
++                    // on below line we are setting
++                    // date to our text view.
++                    var monthOfYear = (monthh.plus(1)).toString()
++                    if (monthOfYear.length == 1){
++                        monthOfYear = "0$monthOfYear"
++                    }
++                    var dayOfMonth = dayy.toString()
++                    if (dayOfMonth.length == 1){
++                        dayOfMonth = "0$dayOfMonth"
++                    }
++                    val dep =year.toString() + "-" + monthOfYear + "-" + dayOfMonth
++                    binding.departureDate.setText(dep)
++
++                },
++                // on below line we are passing year, month
++                // and day for the selected date in our date picker.
++                year,
++                month,
++                day
++            )
++            // at last we are calling show
++            // to display our date picker dialog.
++            datePickerDialog.show()
++        }
++
++        //handleSpinner()
++        handleSightSeeingText()
++
++
++        binding.buttonRegister.setOnClickListener {
++            validateAll()
++        }
++
++        viewModel.publishObject.subscribe { response->
++            response.id?.let { userId ->
++                response?.phoneNo?.let { phoneNo ->
++                    showToast("Otp has been sent to your mobile number")
++                    startActivity(OtpActivity.getIntent(this@RegistrationActivity,userId,phoneNo))
++                }
++            }
++
++        }
++
++        viewModel.showToast.subscribe{ errorString->
++            Toast.makeText(this,errorString,Toast.LENGTH_LONG).show()
++
++        }
++
++
++
++    }
++
++    private fun validateAll() {
++        val firstName = binding.name.text.toString()
++        val lastName = binding.lastName.text.toString()
++        val arrival = binding.arrivalDate.text.toString()
++        val departure = binding.departureDate.text.toString()
++        val mobile = binding.editTextMobile.text.toString()
++        val email = binding.email.text.toString()
++        val org = binding.orgName.text.toString()
++        val designation = binding.designation.text.toString()
++        val tvSiteSeeing = binding.tvSiteSeeing.text.toString()
++        //val password = binding.editTextPassword.text.toString()
++        //val confirmPassword = binding.editTextPasswordConfirm.text.toString()
++        if (firstName.isBlank()
++            || lastName.isBlank()
++            || arrival.isBlank()
++            || departure.isBlank()
++            || mobile.isBlank()
++            || email.isBlank()
++            || org.isBlank()
++            || designation.isBlank()
++            || tvSiteSeeing.isBlank()
++           // || password.isBlank()
++           // || confirmPassword.isBlank()
++        ){
++            showToast("Mandatory Fields can't be empty")
++            return
++        }
++
++        if (binding.editTextMobile.text.toString().isValidPhoneNumber().not()){
++            showToast("Enter Valid Phone Number")
++            return
++        }
++//        if (password.contentEquals(confirmPassword).not()){
++//            showToast("Passwords do not match")
++//            return
++//        }
++        val list = tvSiteSeeing.split(",")
++        val request = RegistrationRequest(firstName,lastName,org,designation,email,mobile,arrival,departure, list)
++        viewModel.registerUser(request)
++
++    }
++
++    private fun handleSightSeeingText() {
++        binding.tvSiteSeeing.setOnClickListener {
++            val builder: AlertDialog.Builder = AlertDialog.Builder(this)
++
++            // set title
++
++            // set title
++            builder.setTitle("Select City")
++
++            // set dialog non cancelable
++
++            // set dialog non cancelable
++            builder.setCancelable(false)
++
++            builder.setMultiChoiceItems(dataArray, selectedItems,
++                OnMultiChoiceClickListener { dialogInterface, i, b ->
++                    // check condition
++                    if (b) {
++                        // when checkbox selected
++                        // Add position  in lang list
++                        dataList.add(i)
++                        // Sort array list
++                        Collections.sort(dataList)
++                    } else {
++                        // when checkbox unselected
++                        // Remove position from langList
++                        dataList.remove(Integer.valueOf(i))
++                    }
++                })
++
++            builder.setPositiveButton("OK",
++                DialogInterface.OnClickListener { dialogInterface, i -> // Initialize string builder
++                    val stringBuilder = StringBuilder()
++                    // use for loop
++                    for (j in 0 until dataList.size) {
++                        // concat array value
++                        stringBuilder.append(dataArray.get(dataList.get(j)))
++                        // check condition
++                        if (j != dataList.size - 1) {
++                            // When j value  not equal
++                            // to lang list size - 1
++                            // add comma
++                            stringBuilder.append(", ")
++                        }
++                    }
++                    // set text on textView
++                    binding.tvSiteSeeing.setText(stringBuilder.toString())
++                })
++
++            builder.setNegativeButton("Cancel",
++                DialogInterface.OnClickListener { dialogInterface, i -> // dismiss dialog
++                    dialogInterface.dismiss()
++                })
++            builder.setNeutralButton("Clear All",
++                DialogInterface.OnClickListener { dialogInterface, i ->
++                    // use for loop
++                    for (j in 0 until selectedItems.size) {
++                        // remove all selection
++                        selectedItems[j] = false
++                        // clear language list
++                        dataList.clear()
++                        // clear text view value
++                        binding.tvSiteSeeing.setText(getString(R.string.select_items))
++                    }
++                })
++            // show dialog
++            // show dialog
++            builder.show()
++        }
++    }
++
++//    private fun handleSpinner() {
++//        val spinner = binding.spinnerSightSeeing
++//        val dataList = listOf<String>("Nalanda","Rajgir","Bodhgaya","Vaishali")
++//        val adapter = MultiSelectionAdapter(this, android.R.layout.simple_spinner_item, dataList)
++//        spinner.adapter = adapter
++//        spinner.prompt = "Select items" // Optional: Set a prompt for the spinner
++//
++//        // spinner.setSelection(adapter.getSelectedItems()) // Restore selected items if needed
++//
++//
++//        spinner.onItemSelectedListener = object : OnItemSelectedListener {
++//            override fun onItemSelected(
++//                parent: AdapterView<*>,
++//                view: View?,
++//                position: Int,
++//                id: Long
++//            ) {
++//                val adapter: MultiSelectionAdapter = parent.adapter as MultiSelectionAdapter
++//                adapter.setSelectedItem(position, !adapter.getSelectedItems().get(position))
++//            }
++//
++//            override fun onNothingSelected(parent: AdapterView<*>?) {
++//                // Handle the case where no item is selected
++//            }
++//        }
++//    }
++}
+\ No newline at end of file
+Index: app/src/main/java/com/example/movie/utils/Extensions.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/example/movie/utils/Extensions.kt b/app/src/main/java/com/example/movie/utils/Extensions.kt
+new file mode 100644
+--- /dev/null	(date 1686170594340)
++++ b/app/src/main/java/com/example/movie/utils/Extensions.kt	(date 1686170594340)
+@@ -0,0 +1,52 @@
++package com.example.movie.utils
++
++import android.content.Context
++import android.view.View
++import android.widget.Toast
++import androidx.core.view.isVisible
++
++
++fun Context.showToast(message: String?) {
++    Toast.makeText(this.applicationContext, message, Toast.LENGTH_SHORT).show()
++}
++
++fun View?.show() {
++    if (this == null)
++        return
++    if (this.visibility != View.VISIBLE) {
++        this.visibility = View.VISIBLE
++    }
++}
++
++fun View?.gone() {
++    if (this == null)
++        return
++    if (this.visibility != View.GONE) {
++        this.visibility = View.GONE
++    }
++}
++
++fun View?.setVisible(show: Boolean) {
++    if (this == null)
++        return
++    if (show) this.show() else this.gone()
++}
++
++fun View?.hide() {
++    if (this == null)
++        return
++    if (this.visibility != View.INVISIBLE) {
++        this.visibility = View.INVISIBLE
++    }
++}
++
++fun View?.isVisible(): Boolean {
++    if (this == null) return false
++    return this.visibility == View.VISIBLE
++}
++
++
++fun String.isValidPhoneNumber() : Boolean {
++    return this.isNotBlank() && this.isNotEmpty() && this.length == 10
++}
++
+Index: app/src/main/res/layout/activity_registration.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/layout/activity_registration.xml b/app/src/main/res/layout/activity_registration.xml
+new file mode 100644
+--- /dev/null	(date 1686204607649)
++++ b/app/src/main/res/layout/activity_registration.xml	(date 1686204607649)
+@@ -0,0 +1,231 @@
++<?xml version="1.0" encoding="utf-8"?>
++<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
++    xmlns:app="http://schemas.android.com/apk/res-auto"
++    android:layout_width="match_parent"
++    android:layout_height="match_parent"
++    android:background="@color/grey_f2f2f2"
++    android:padding="16dp">
++
++
++    <ImageView
++        android:id="@+id/app_icon"
++        android:layout_width="100dp"
++        android:layout_height="100dp"
++        app:layout_constraintTop_toTopOf="parent"
++        app:layout_constraintStart_toStartOf="parent"
++        app:layout_constraintEnd_toEndOf="parent"
++        android:src="@drawable/app_icon"/>
++
++
++    <ScrollView
++        android:id="@+id/scroll_view"
++        android:layout_width="match_parent"
++        android:layout_height="0dp"
++        android:layout_marginBottom="@dimen/_12sdp"
++        app:layout_constraintTop_toBottomOf="@+id/app_icon"
++        app:layout_constraintBottom_toTopOf="@+id/button_register"
++        >
++
++        <androidx.constraintlayout.widget.ConstraintLayout
++            android:layout_width="match_parent"
++            android:layout_height="wrap_content">
++
++
++            <EditText
++                android:id="@+id/name"
++                android:layout_width="match_parent"
++                android:layout_height="wrap_content"
++                android:layout_marginBottom="16dp"
++                android:background="@drawable/blue_bg_radius8"
++                android:hint="First Name"
++                android:layout_marginTop="@dimen/_12sdp"
++                android:padding="@dimen/_12sdp"
++                android:textColor="@android:color/black"
++                android:textColorHint="@color/grey_light"
++                app:layout_constraintTop_toTopOf="parent"
++                app:layout_constraintVertical_chainStyle="packed" />
++
++            <EditText
++                android:id="@+id/last_name"
++                android:layout_width="match_parent"
++                android:layout_height="wrap_content"
++                android:layout_marginBottom="16dp"
++                android:background="@drawable/blue_bg_radius8"
++                android:hint="Last Name"
++                android:padding="@dimen/_12sdp"
++                android:layout_marginTop="@dimen/_16sdp"
++                android:textColor="@android:color/black"
++                android:textColorHint="@color/grey_light"
++                app:layout_constraintTop_toBottomOf="@+id/name"
++                app:layout_constraintVertical_chainStyle="packed" />
++
++
++
++            <EditText
++                android:id="@+id/editTextMobile"
++                android:layout_width="match_parent"
++                android:layout_height="wrap_content"
++                android:layout_marginBottom="16dp"
++                android:background="@color/app_divider_on_white"
++                android:hint="Phone Number"
++                android:inputType="phone"
++                android:maxLength="10"
++                android:padding="@dimen/_12sdp"
++                android:layout_marginTop="@dimen/_16sdp"
++                android:textColor="@android:color/black"
++                android:textColorHint="@color/grey_light"
++                app:layout_constraintTop_toBottomOf="@+id/last_name"
++                app:layout_constraintVertical_chainStyle="packed" />
++
++            <EditText
++                android:id="@+id/email"
++                android:layout_width="match_parent"
++                android:layout_height="wrap_content"
++                android:layout_marginBottom="16dp"
++                android:background="@color/app_divider_on_white"
++                android:hint="Email"
++                android:inputType="textEmailAddress"
++                android:layout_marginTop="@dimen/_16sdp"
++                android:padding="@dimen/_12sdp"
++                android:textColor="@android:color/black"
++                android:textColorHint="@color/grey_light"
++                app:layout_constraintTop_toBottomOf="@+id/editTextMobile"
++                app:layout_constraintVertical_chainStyle="packed" />
++
++            <EditText
++                android:id="@+id/org_name"
++                android:layout_width="match_parent"
++                android:layout_height="wrap_content"
++                android:layout_marginBottom="16dp"
++                android:background="@color/app_divider_on_white"
++                android:hint="Organisation"
++                android:inputType="textEmailAddress"
++                android:layout_marginTop="@dimen/_16sdp"
++                android:padding="@dimen/_12sdp"
++                android:textColor="@android:color/black"
++                android:textColorHint="@color/grey_light"
++                app:layout_constraintTop_toBottomOf="@+id/email"
++                app:layout_constraintVertical_chainStyle="packed" />
++
++            <EditText
++                android:id="@+id/designation"
++                android:layout_width="match_parent"
++                android:layout_height="wrap_content"
++                android:layout_marginBottom="16dp"
++                android:background="@color/app_divider_on_white"
++                android:hint="Designation"
++                android:layout_marginTop="@dimen/_16sdp"
++                android:padding="@dimen/_12sdp"
++                android:textColor="@android:color/black"
++                android:textColorHint="@color/grey_light"
++                app:layout_constraintTop_toBottomOf="@+id/org_name"
++                app:layout_constraintVertical_chainStyle="packed" />
++
++            <TextView
++                android:id="@+id/arrival_date"
++                android:layout_width="match_parent"
++                android:layout_height="wrap_content"
++                android:layout_marginBottom="16dp"
++                android:background="@color/app_divider_on_white"
++                android:hint="Arrival Date"
++                android:textSize="@dimen/_12ssp"
++                android:layout_marginTop="@dimen/_16sdp"
++                android:padding="@dimen/_12sdp"
++                android:textColor="@android:color/black"
++                android:textColorHint="@color/grey_light"
++                app:layout_constraintTop_toBottomOf="@+id/designation"
++                app:layout_constraintVertical_chainStyle="packed" />
++
++
++            <TextView
++                android:id="@+id/departure_date"
++                android:layout_width="match_parent"
++                android:layout_height="wrap_content"
++                android:layout_marginBottom="16dp"
++                android:background="@color/app_divider_on_white"
++                android:hint="Departure Date"
++                android:textSize="@dimen/_12ssp"
++                android:layout_marginTop="@dimen/_16sdp"
++                android:padding="@dimen/_12sdp"
++                android:textColor="@android:color/black"
++                android:textColorHint="@color/grey_light"
++                app:layout_constraintTop_toBottomOf="@+id/arrival_date"
++                app:layout_constraintVertical_chainStyle="packed" />
++
++            <TextView
++                android:id="@+id/tv_site_seeing"
++                android:layout_width="match_parent"
++                android:layout_height="wrap_content"
++                android:padding="@dimen/_12sdp"
++                android:textSize="@dimen/_12ssp"
++                android:text="@string/select_items"
++                android:background="@color/app_divider_on_white"
++                android:layout_marginTop="@dimen/_16sdp"
++                android:textColor="@android:color/black"
++                android:textColorHint="@color/grey_light"
++                android:prompt="@string/select_items"
++                app:layout_constraintTop_toBottomOf="@+id/departure_date"
++                android:entries="@array/cities"/>
++
++
++<!--            <EditText-->
++<!--                android:id="@+id/editTextPassword"-->
++<!--                android:layout_width="match_parent"-->
++<!--                android:layout_height="wrap_content"-->
++<!--                android:layout_marginTop="@dimen/_16sdp"-->
++<!--                android:layout_marginBottom="16dp"-->
++<!--                android:background="@color/app_divider_on_white"-->
++<!--                android:hint="Password"-->
++<!--                android:inputType="textPassword"-->
++<!--                android:padding="@dimen/_12sdp"-->
++<!--                android:textColor="@android:color/black"-->
++<!--                android:textColorHint="@color/color_190A28"-->
++<!--                app:layout_constraintTop_toBottomOf="@+id/tv_site_seeing"-->
++<!--                app:layout_constraintVertical_chainStyle="packed" />-->
++
++<!--            <EditText-->
++<!--                android:id="@+id/editTextPasswordConfirm"-->
++<!--                android:layout_width="match_parent"-->
++<!--                android:layout_height="wrap_content"-->
++<!--                android:layout_marginTop="@dimen/_16sdp"-->
++<!--                android:layout_marginBottom="16dp"-->
++<!--                android:background="@color/app_divider_on_white"-->
++<!--                android:hint="Confirm Password"-->
++<!--                android:inputType="textPassword"-->
++<!--                android:padding="@dimen/_12sdp"-->
++<!--                android:textColor="@android:color/black"-->
++<!--                android:textColorHint="@android:color/black"-->
++<!--                app:layout_constraintTop_toBottomOf="@+id/editTextPassword"-->
++<!--                app:layout_constraintVertical_chainStyle="packed" />-->
++
++        </androidx.constraintlayout.widget.ConstraintLayout>
++
++    </ScrollView>
++
++    <Button
++        android:id="@+id/button_register"
++        style="@style/AppTheme"
++        android:layout_width="match_parent"
++        android:layout_height="wrap_content"
++        android:background="@color/design_default_color_primary"
++        android:text="Register"
++        android:textColor="@color/white"
++        android:textStyle="bold"
++        android:layout_marginBottom="@dimen/_20sdp"
++        app:layout_constraintBottom_toBottomOf="parent"
++        />
++
++
++<!--    <TextView-->
++<!--        android:id="@+id/already_a_member"-->
++<!--        android:layout_width="match_parent"-->
++<!--        android:layout_height="wrap_content"-->
++<!--        android:layout_marginBottom="24dp"-->
++<!--        android:gravity="right"-->
++<!--        android:text="Already a member ! Login"-->
++<!--        android:textColor="@color/color_190A28"-->
++<!--        android:textSize="@dimen/_12ssp"-->
++<!--        android:textStyle="bold"-->
++<!--        app:layout_constraintBottom_toBottomOf="parent" />-->
++
++</androidx.constraintlayout.widget.ConstraintLayout>
+\ No newline at end of file
+Index: app/src/main/java/com/example/movie/ui/main/registration/RegistrationRequest.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/example/movie/ui/main/registration/RegistrationRequest.kt b/app/src/main/java/com/example/movie/ui/main/registration/RegistrationRequest.kt
+new file mode 100644
+--- /dev/null	(date 1686148714827)
++++ b/app/src/main/java/com/example/movie/ui/main/registration/RegistrationRequest.kt	(date 1686148714827)
+@@ -0,0 +1,30 @@
++package com.example.movie.ui.main.registration
++
++import com.google.gson.annotations.SerializedName
++
++data class RegistrationRequest (
++
++    @SerializedName("first_name")
++    val firstName : String,
++    @SerializedName("last_name")
++    val lastName : String,
++
++    @SerializedName("organisation")
++    val organisation : String,
++    @SerializedName("designation")
++    val designation : String,
++    @SerializedName("email")
++    val email : String,
++    @SerializedName("phone_no")
++    val phoneNo : String,
++    @SerializedName("arrival_date")
++    val arrivalDate : String,
++
++    @SerializedName("departure_date")
++    val departureDate : String,
++    @SerializedName("site_seeing")
++    val siteSeeing : List<String>
++
++
++
++        )
+\ No newline at end of file
+Index: app/src/main/java/com/example/movie/ui/main/login/LoginViewModel.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/example/movie/ui/main/login/LoginViewModel.kt b/app/src/main/java/com/example/movie/ui/main/login/LoginViewModel.kt
+new file mode 100644
+--- /dev/null	(date 1686069336912)
++++ b/app/src/main/java/com/example/movie/ui/main/login/LoginViewModel.kt	(date 1686069336912)
+@@ -0,0 +1,13 @@
++package com.example.movie.ui.main.login
++
++import android.view.View
++import androidx.lifecycle.ViewModel
++import com.example.movie.utils.NetworkService
++import javax.inject.Inject
++
++class LoginViewModel : ViewModel() {
++
++    @Inject
++    lateinit var service: NetworkService
++
++}
+\ No newline at end of file
+Index: app/src/main/java/com/example/movie/ui/main/otp/OtpViewModel.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/example/movie/ui/main/otp/OtpViewModel.kt b/app/src/main/java/com/example/movie/ui/main/otp/OtpViewModel.kt
+new file mode 100644
+--- /dev/null	(date 1686170594369)
++++ b/app/src/main/java/com/example/movie/ui/main/otp/OtpViewModel.kt	(date 1686170594369)
+@@ -0,0 +1,124 @@
++package com.example.movie.ui.main.otp
++
++import android.util.Log
++import androidx.lifecycle.ViewModel
++import androidx.lifecycle.ViewModelProviders
++import androidx.lifecycle.viewModelScope
++import com.example.movie.App
++import com.example.movie.ui.main.registration.RegistrationRequest
++import com.example.movie.ui.main.registration.RegistrationResponse
++import com.example.movie.ui.main.registration.RegistrationViewModel
++import com.example.movie.utils.NetworkService
++import io.reactivex.subjects.PublishSubject
++import kotlinx.coroutines.Dispatchers
++import kotlinx.coroutines.async
++import kotlinx.coroutines.launch
++import javax.inject.Inject
++
++class OtpViewModel : ViewModel() {
++
++
++    init {
++        App().component.inject(this)
++    }
++    @Inject
++    lateinit var service: NetworkService
++
++
++
++
++
++
++    var publishObjectOtpResponse = PublishSubject.create<OtpResponse>()
++    var publishObjectOtpVerifiedResponse = PublishSubject.create<OtpVerifiedResponse>()
++    var showToast = PublishSubject.create<String>()
++
++
++    suspend fun sendOtp(request: OtpRequest): OtpResponse? {
++        try{
++            val data =  viewModelScope.async(Dispatchers.IO){
++                service.sendOtp(request)
++            }.await()
++            if(data.isSuccessful){
++                return data.body()?.data
++            }
++            else{
++                showToast.onNext( data.body()?.error?.message?:"Something went wrong")
++            }
++
++
++        }
++        catch (e:Exception){
++            Log.e("exception","")
++        }
++        return null
++
++
++    }
++
++    fun triggerOtp(request: OtpRequest) {
++        val job = viewModelScope.launch{
++            val it = sendOtp(request)
++            it?.let {
++                updateData(it)
++            }
++
++
++        }
++
++
++    }
++
++    private fun updateData(otpRes: OtpResponse) {
++
++        publishObjectOtpResponse.onNext(otpRes )
++
++
++    }
++
++
++
++    suspend fun verifyOtp(request: OtpVerifyRequest): OtpVerifiedResponse? {
++        try{
++            val data =  viewModelScope.async(Dispatchers.IO){
++                service.validateOtp(request)
++            }.await()
++            if(data.isSuccessful){
++                return data.body()?.data
++            }
++            else{
++                showToast.onNext( data.body()?.error?.message?:"Something went wrong")
++            }
++
++
++        }
++        catch (e:Exception){
++            Log.e("exception","")
++        }
++        return null
++
++
++    }
++
++    fun validateOtp(request: OtpVerifyRequest) {
++        val job = viewModelScope.launch{
++            val it = verifyOtp(request)
++            it?.let {
++                updateDataOtpVerified(it)
++            }
++
++
++        }
++
++
++    }
++
++    private fun updateDataOtpVerified(otpRes: OtpVerifiedResponse) {
++
++        publishObjectOtpVerifiedResponse.onNext(otpRes )
++
++
++    }
++
++
++}
+\ No newline at end of file
+Index: app/src/main/java/com/example/movie/utils/NetworkService.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.example.movie.utils\n\n\nimport com.example.movie.data.Constants\nimport com.google.gson.GsonBuilder\nimport okhttp3.OkHttpClient\nimport okhttp3.logging.HttpLoggingInterceptor\nimport retrofit2.Retrofit\nimport retrofit2.converter.gson.GsonConverterFactory\nimport retrofit2.converter.scalars.ScalarsConverterFactory\nimport java.util.concurrent.TimeUnit\n\n\nclass NetworkService {\n\n\n\n    private val searchApi: SearchApi by lazy {\n        val interceptor = HttpLoggingInterceptor()\n        var okHttpClient: OkHttpClient? = OkHttpClient.Builder()\n            .connectTimeout(60, TimeUnit.SECONDS)\n            .readTimeout(60, TimeUnit.SECONDS)\n            .writeTimeout(60, TimeUnit.SECONDS)\n            .addInterceptor(interceptor).build()\n\n        val gson = GsonBuilder()\n            .setLenient()\n            .create()\n        interceptor.setLevel(HttpLoggingInterceptor.Level.BODY)\n        val retrofit = Retrofit.Builder()\n            .baseUrl(Constants.baseURL)\n        .addConverterFactory(ScalarsConverterFactory.create())\n        .addConverterFactory(GsonConverterFactory.create(gson))\n            .client(okHttpClient)\n            .build()\n\n        retrofit.create(SearchApi::class.java)\n    }\n\n    suspend fun getMovieList( search:String,page: Int) = searchApi.getMovieList(search,page)\n    suspend fun getMovieDetails( id: String) = searchApi.getMovieDetails(id)\n\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/example/movie/utils/NetworkService.kt b/app/src/main/java/com/example/movie/utils/NetworkService.kt
+--- a/app/src/main/java/com/example/movie/utils/NetworkService.kt	(revision 15d1a7f5e7d56bcf033084c37ff10aca5b0ca488)
++++ b/app/src/main/java/com/example/movie/utils/NetworkService.kt	(date 1686169303519)
+@@ -2,7 +2,11 @@
+ 
+ 
+ import com.example.movie.data.Constants
++import com.example.movie.ui.main.otp.OtpRequest
++import com.example.movie.ui.main.otp.OtpVerifyRequest
++import com.example.movie.ui.main.registration.RegistrationRequest
+ import com.google.gson.GsonBuilder
++import com.readystatesoftware.chuck.ChuckInterceptor
+ import okhttp3.OkHttpClient
+ import okhttp3.logging.HttpLoggingInterceptor
+ import retrofit2.Retrofit
+@@ -28,7 +32,7 @@
+             .create()
+         interceptor.setLevel(HttpLoggingInterceptor.Level.BODY)
+         val retrofit = Retrofit.Builder()
+-            .baseUrl(Constants.baseURL)
++            .baseUrl(Constants.baseUrl)
+         .addConverterFactory(ScalarsConverterFactory.create())
+         .addConverterFactory(GsonConverterFactory.create(gson))
+             .client(okHttpClient)
+@@ -40,4 +44,8 @@
+     suspend fun getMovieList( search:String,page: Int) = searchApi.getMovieList(search,page)
+     suspend fun getMovieDetails( id: String) = searchApi.getMovieDetails(id)
+ 
++    suspend fun registerUser(request: RegistrationRequest) = searchApi.registerUser(request)
++    suspend fun sendOtp(request: OtpRequest) = searchApi.sendOtp(request)
++    suspend fun validateOtp(request: OtpVerifyRequest) = searchApi.verifyOtp(request)
++
+ }
+\ No newline at end of file
+Index: app/src/main/res/menu/menu_main.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/menu/menu_main.xml b/app/src/main/res/menu/menu_main.xml
+new file mode 100644
+--- /dev/null	(date 1686198644383)
++++ b/app/src/main/res/menu/menu_main.xml	(date 1686198644383)
+@@ -0,0 +1,9 @@
++<menu xmlns:android="http://schemas.android.com/apk/res/android">
++    <item
++        android:id="@+id/menu_item1"
++        android:title="View Driver Details" />
++    <item
++        android:id="@+id/menu_item2"
++        android:title="View Admin Details" />
++    <!-- Add more menu items if needed -->
++</menu>
+\ No newline at end of file
+Index: app/src/main/java/com/example/movie/utils/SearchApi.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.example.movie.utils\n\nimport com.example.movie.ui.main.model.MovieResponse\nimport com.example.movie.ui.movieDetail.model.MovieDetailsResponse\nimport retrofit2.http.GET\nimport retrofit2.http.Query\n\ninternal interface SearchApi {\n\n\n    @GET(\"?apikey=b9bd48a6&type=movie\")\n     suspend fun getMovieList(\n        @Query(\"s\") s:String,\n        @Query(\"page\") page:Int\n    ): MovieResponse?\n\n    @GET(\"?apikey=b9bd48a6\")\n    suspend fun getMovieDetails(\n        @Query(\"i\") id:String\n    ): MovieDetailsResponse?\n\n}\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/example/movie/utils/SearchApi.kt b/app/src/main/java/com/example/movie/utils/SearchApi.kt
+--- a/app/src/main/java/com/example/movie/utils/SearchApi.kt	(revision 15d1a7f5e7d56bcf033084c37ff10aca5b0ca488)
++++ b/app/src/main/java/com/example/movie/utils/SearchApi.kt	(date 1686169303517)
+@@ -1,8 +1,17 @@
+ package com.example.movie.utils
+ 
+ import com.example.movie.ui.main.model.MovieResponse
++import com.example.movie.ui.main.otp.OtpRequest
++import com.example.movie.ui.main.otp.OtpResponse
++import com.example.movie.ui.main.otp.OtpVerifiedResponse
++import com.example.movie.ui.main.otp.OtpVerifyRequest
++import com.example.movie.ui.main.registration.RegistrationRequest
++import com.example.movie.ui.main.registration.RegistrationResponse
+ import com.example.movie.ui.movieDetail.model.MovieDetailsResponse
++import retrofit2.Response
++import retrofit2.http.Body
+ import retrofit2.http.GET
++import retrofit2.http.POST
+ import retrofit2.http.Query
+ 
+ internal interface SearchApi {
+@@ -19,4 +28,19 @@
+         @Query("i") id:String
+     ): MovieDetailsResponse?
+ 
++    @POST("/register")
++    suspend fun registerUser(
++        @Body request: RegistrationRequest
++    ): Response<GenericResponse<RegistrationResponse>>
++
++    @POST("/otp/send")
++    suspend fun sendOtp(
++        @Body request: OtpRequest
++    ): Response<GenericResponse<OtpResponse>>
++
++    @POST("/otp/verify")
++    suspend fun verifyOtp(
++        @Body request: OtpVerifyRequest
++    ): Response<GenericResponse<OtpVerifiedResponse>>
++
+ }
+Index: .idea/compiler.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/compiler.xml b/.idea/compiler.xml
+new file mode 100644
+--- /dev/null	(date 1686061549961)
++++ b/.idea/compiler.xml	(date 1686061549961)
+@@ -0,0 +1,6 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="CompilerConfiguration">
++    <bytecodeTargetLevel target="11" />
++  </component>
++</project>
+\ No newline at end of file
+Index: app/src/main/java/com/example/movie/ui/main/splash/SplashActivity.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/example/movie/ui/main/splash/SplashActivity.kt b/app/src/main/java/com/example/movie/ui/main/splash/SplashActivity.kt
+new file mode 100644
+--- /dev/null	(date 1686170594373)
++++ b/app/src/main/java/com/example/movie/ui/main/splash/SplashActivity.kt	(date 1686170594373)
+@@ -0,0 +1,22 @@
++package com.example.movie.ui.main.splash
++
++import android.content.Intent
++import android.os.Bundle
++import android.os.Handler
++import androidx.appcompat.app.AppCompatActivity
++import com.example.movie.R
++import com.example.movie.ui.main.home.HomeActivity
++import kotlinx.coroutines.delay
++
++class SplashActivity : AppCompatActivity() {
++
++    override fun onCreate(savedInstanceState: Bundle?) {
++        super.onCreate(savedInstanceState)
++        setContentView(R.layout.activity_splash)
++        supportActionBar?.hide()
++        Handler().postDelayed({
++            startActivity(Intent(this,HomeActivity::class.java))
++            finish()
++        },3000)
++    }
++}
+Index: app/src/main/java/com/example/movie/ui/main/login/LoginActivity.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/example/movie/ui/main/login/LoginActivity.kt b/app/src/main/java/com/example/movie/ui/main/login/LoginActivity.kt
+new file mode 100644
+--- /dev/null	(date 1686069336901)
++++ b/app/src/main/java/com/example/movie/ui/main/login/LoginActivity.kt	(date 1686069336901)
+@@ -0,0 +1,12 @@
++package com.example.movie.ui.main.login
++
++import android.os.Bundle
++import androidx.appcompat.app.AppCompatActivity
++
++class LoginActivity : AppCompatActivity() {
++
++    override fun onCreate(savedInstanceState: Bundle?) {
++        super.onCreate(savedInstanceState)
++
++    }
++}
+\ No newline at end of file
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"ProjectRootManager\" version=\"2\" languageLevel=\"JDK_1_8\" project-jdk-name=\"1.8\" project-jdk-type=\"JavaSDK\">\n    <output url=\"file://$PROJECT_DIR$/build/classes\" />\n  </component>\n  <component name=\"ProjectType\">\n    <option name=\"id\" value=\"Android\" />\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/misc.xml b/.idea/misc.xml
+--- a/.idea/misc.xml	(revision 15d1a7f5e7d56bcf033084c37ff10aca5b0ca488)
++++ b/.idea/misc.xml	(date 1686061831394)
+@@ -1,6 +1,6 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
+-  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" project-jdk-name="1.8" project-jdk-type="JavaSDK">
++  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
+     <output url="file://$PROJECT_DIR$/build/classes" />
+   </component>
+   <component name="ProjectType">
+Index: app/src/main/res/drawable/blue_bg_radius8.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/drawable/blue_bg_radius8.xml b/app/src/main/res/drawable/blue_bg_radius8.xml
+new file mode 100644
+--- /dev/null	(date 1686200739352)
++++ b/app/src/main/res/drawable/blue_bg_radius8.xml	(date 1686200739352)
+@@ -0,0 +1,9 @@
++<?xml version="1.0" encoding="utf-8"?>
++<shape xmlns:android="http://schemas.android.com/apk/res/android"
++    android:shape="rectangle">
++    <solid android:color="@color/color_light_blue"/>
++    <stroke android:width="1dp"
++        android:color="@color/design_default_color_primary"/>
++    <corners android:radius="8dp"/>
++
++</shape>
+\ No newline at end of file
+Index: app/src/main/java/com/example/movie/ui/main/webview/WebViewActivity.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/example/movie/ui/main/webview/WebViewActivity.kt b/app/src/main/java/com/example/movie/ui/main/webview/WebViewActivity.kt
+new file mode 100644
+--- /dev/null	(date 1686203959401)
++++ b/app/src/main/java/com/example/movie/ui/main/webview/WebViewActivity.kt	(date 1686203959401)
+@@ -0,0 +1,52 @@
++package com.example.movie.ui.main.webview
++
++import android.content.Context
++import android.content.Intent
++import android.os.Bundle
++import android.view.MenuItem
++import androidx.appcompat.app.AppCompatActivity
++import com.example.movie.databinding.ActivityHomeBinding
++import com.example.movie.databinding.ActivityWebviewBinding
++
++class WebViewActivity : AppCompatActivity() {
++
++    lateinit var binding : ActivityWebviewBinding
++    companion object{
++        val URL = "url"
++        val DAY = "day"
++
++        fun getIntent(context: Context,url:String,day : String) : Intent{
++            return Intent(context,WebViewActivity::class.java).apply {
++                putExtra(URL,url)
++                putExtra(DAY,day)
++            }
++        }
++
++    }
++
++    override fun onOptionsItemSelected(item: MenuItem): Boolean {
++        val id: Int = item.getItemId()
++        if (id == android.R.id.home) {
++            // Handle the back button press event
++            onBackPressed()
++            return true
++        }
++        return super.onOptionsItemSelected(item)
++    }
++
++    override fun onBackPressed() {
++        super.onBackPressed()
++    }
++
++
++    override fun onCreate(savedInstanceState: Bundle?) {
++        super.onCreate(savedInstanceState)
++        binding = ActivityWebviewBinding.inflate(layoutInflater)
++        setContentView(binding.root)
++        supportActionBar?.setDisplayHomeAsUpEnabled(true)
++        setTitle(intent.getStringExtra(DAY)?:"")
++        val url = intent.getStringExtra(URL)?:""
++        binding.webView.loadUrl(url)
++
++    }
++}
+\ No newline at end of file
+Index: app/src/main/java/com/example/movie/ui/main/registration/RegistrationViewModel.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/example/movie/ui/main/registration/RegistrationViewModel.kt b/app/src/main/java/com/example/movie/ui/main/registration/RegistrationViewModel.kt
+new file mode 100644
+--- /dev/null	(date 1686169303511)
++++ b/app/src/main/java/com/example/movie/ui/main/registration/RegistrationViewModel.kt	(date 1686169303511)
+@@ -0,0 +1,79 @@
++package com.example.movie.ui.main.registration
++
++import android.util.Log
++import androidx.lifecycle.LiveData
++import androidx.lifecycle.MutableLiveData
++import androidx.lifecycle.ViewModel
++import androidx.lifecycle.viewModelScope
++import com.example.movie.App
++import com.example.movie.ui.main.model.Movie
++import com.example.movie.utils.NetworkService
++import io.reactivex.subjects.PublishSubject
++import kotlinx.coroutines.Dispatchers
++import kotlinx.coroutines.async
++import kotlinx.coroutines.launch
++import javax.inject.Inject
++
++class RegistrationViewModel : ViewModel() {
++    init {
++        App().component.inject(this)
++    }
++    @Inject
++    lateinit var service: NetworkService
++
++
++
++
++    fun registerUser(){
++
++    }
++
++
++    var publishObject = PublishSubject.create<RegistrationResponse>()
++    var showToast = PublishSubject.create<String>()
++
++    suspend fun register(request: RegistrationRequest): RegistrationResponse? {
++        try{
++            val data =  viewModelScope.async(Dispatchers.IO){
++                service.registerUser(request)
++            }.await()
++            if(data.isSuccessful){
++                return data.body()?.data
++            }
++            else{
++                showToast.onNext( data.body()?.error?.message?:"Something went wrong")
++            }
++
++
++        }
++        catch (e:Exception){
++            Log.e("exception","")
++        }
++        return null
++
++
++    }
++
++    fun registerUser(request: RegistrationRequest) {
++        val job = viewModelScope.launch{
++            val it = register(request)
++            it?.let {
++                updateData(it)
++            }
++
++
++        }
++
++
++    }
++
++    private fun updateData(registrationResponse: RegistrationResponse) {
++
++        publishObject.onNext(registrationResponse )
++
++
++    }
++
++
++}
++
+Index: app/src/main/java/com/example/movie/data/Constants.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.example.movie.data\n\nclass Constants {\n    companion object{\n      const val  baseURL = \"http://www.omdbapi.com\"\n    }\n\n\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/example/movie/data/Constants.kt b/app/src/main/java/com/example/movie/data/Constants.kt
+--- a/app/src/main/java/com/example/movie/data/Constants.kt	(revision 15d1a7f5e7d56bcf033084c37ff10aca5b0ca488)
++++ b/app/src/main/java/com/example/movie/data/Constants.kt	(date 1686170594371)
+@@ -3,6 +3,10 @@
+ class Constants {
+     companion object{
+       const val  baseURL = "http://www.omdbapi.com"
++      const val  baseUrl = "https://conclave-test.el.r.appspot.com"
++      const val  token = "token"
++      const val  isLoggedIn = "isLoggedIn"
++      const val  userData = "userData"
+     }
+ 
+ 
+Index: app/src/main/res/layout/activity_webview.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/layout/activity_webview.xml b/app/src/main/res/layout/activity_webview.xml
+new file mode 100644
+--- /dev/null	(date 1686203575327)
++++ b/app/src/main/res/layout/activity_webview.xml	(date 1686203575327)
+@@ -0,0 +1,13 @@
++<?xml version="1.0" encoding="utf-8"?>
++<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
++    android:layout_width="match_parent"
++    android:layout_height="match_parent">
++
++
++    <WebView
++        android:id="@+id/web_view"
++        android:layout_width="match_parent"
++        android:layout_height="match_parent"/>
++
++
++</androidx.constraintlayout.widget.ConstraintLayout>
+\ No newline at end of file
+Index: app/src/main/res/layout/activity_login.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/layout/activity_login.xml b/app/src/main/res/layout/activity_login.xml
+new file mode 100644
+--- /dev/null	(date 1686064558043)
++++ b/app/src/main/res/layout/activity_login.xml	(date 1686064558043)
+@@ -0,0 +1,65 @@
++<?xml version="1.0" encoding="utf-8"?>
++<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
++    android:layout_width="match_parent"
++    xmlns:app="http://schemas.android.com/apk/res-auto"
++    android:background="@color/light_gray"
++    android:padding="16dp"
++    android:layout_height="match_parent">
++
++
++    <EditText
++        android:id="@+id/editTextMobile"
++        android:layout_width="match_parent"
++        android:layout_height="wrap_content"
++        android:inputType="phone"
++        android:background="@color/app_divider_on_white"
++        android:textColorHint="@android:color/black"
++        app:layout_constraintVertical_chainStyle="packed"
++        app:layout_constraintTop_toTopOf="parent"
++        app:layout_constraintBottom_toBottomOf="parent"
++        android:textColor="@android:color/black"
++        android:hint="Phone Number"
++        android:padding="8dp"
++        android:layout_marginBottom="16dp" />
++
++    <EditText
++        android:id="@+id/editTextPassword"
++        android:layout_width="match_parent"
++        android:layout_height="wrap_content"
++        android:inputType="textPassword"
++        android:hint="Password"
++        android:background="@color/app_divider_on_white"
++        android:textColorHint="@android:color/black"
++        android:textColor="@android:color/black"
++        app:layout_constraintVertical_chainStyle="packed"
++        app:layout_constraintTop_toBottomOf="@+id/editTextMobile"
++        android:layout_marginTop="16dp"
++        android:padding="8dp"
++        android:layout_marginBottom="16dp" />
++
++    <Button
++        android:id="@+id/buttonLogin"
++        android:layout_width="match_parent"
++        android:layout_height="wrap_content"
++        style="@style/AppTheme"
++        android:background="@color/design_default_color_primary"
++        app:layout_constraintVertical_chainStyle="packed"
++        android:layout_marginTop="32dp"
++        android:textColor="@color/white"
++        android:textStyle="bold"
++        app:layout_constraintTop_toBottomOf="@+id/editTextPassword"
++        android:text="Login" />
++
++
++    <TextView
++        android:layout_width="match_parent"
++        android:layout_height="wrap_content"
++        android:textColor="@color/color_190A28"
++        android:text="Not a member ! Register"
++        android:textSize="@dimen/_12ssp"
++        android:textStyle="bold"
++        android:layout_marginTop="@dimen/_12sdp"
++        android:gravity="right"
++        app:layout_constraintTop_toBottomOf="@+id/buttonLogin"/>
++
++</androidx.constraintlayout.widget.ConstraintLayout>
+\ No newline at end of file

@@ -1,0 +1,9 @@
+<changelist name="shelve_changes" date="1686209751707" recycled="false">
+  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/shelve_changes/shelved.patch" />
+  <option name="DESCRIPTION" value="shelve changes" />
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="app/src/main/res/drawable/app_icon.png" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/shelve_changes/app_icon.png" />
+  </binary>
+</changelist>
